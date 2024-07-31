@@ -5,3 +5,93 @@
 body {
     background-color:lightskyblue;
 }
+
+/* INFO DIV */
+
+#info-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-div-box {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid red;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+/* RESET BUTTON */
+
+#reset-div {
+    padding: 10px;
+    border: 1px solid red;
+}
+
+/* STEP DIVS */
+
+.step-div { 
+    display: flex;
+    flex-direction: row;
+}
+
+.step-div-box {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-div-box-top {
+    padding: 10px;
+    border: 1px solid purple;
+}
+
+.step-div-box-middle {
+    padding: 10px;
+    border: 1px solid orange;
+}
+
+.step-div-box-bottom {
+    padding: 10px;
+    border: 1px solid green;
+}
+
+/* TIMER DIVS */
+
+.timer-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.timer-div-box {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-div-box-top {
+    padding: 10px;
+    border: 1px solid purple;
+}
+
+.timer-div-box-middle {
+    padding: 10px;
+    border: 1px solid orange;
+}
+
+.timer-div-box-bottom {
+    padding: 10px;
+    border: 1px solid green;
+
+}
+
+/* HIDDEN DIV */
+
+#hidden-div {
+    padding: 10px;
+    border: 1px solid red;
+}
