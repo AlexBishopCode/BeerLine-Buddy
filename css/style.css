@@ -115,6 +115,7 @@ body {
 #hidden-div {
     padding: 10px;
     border: 1px solid red;
+    display: none;
 }
 
 /* MEDIA QUERY FOR LARGER SCREENS  */

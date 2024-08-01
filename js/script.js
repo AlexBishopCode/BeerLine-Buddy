@@ -1,4 +1,4 @@
-console.log('Hello World!')
+console.log('Hello World!');
 
 // INSTRUCTIONAL STEPS
 
@@ -52,6 +52,8 @@ const checkboxes = [
   
   // Track the currently clickable checkbox
   let currentCheckboxIndex = 0;
+
+  let hiddenDiv = document.getElementById('hidden-div');
   
   // Function to change the checkbox when clicked and activate the next checkbox
   function checkboxClick(index) {
@@ -64,9 +66,15 @@ const checkboxes = [
     if (currentCheckboxIndex < checkboxes.length) {
       checkboxes[currentCheckboxIndex].classList.remove('inactive-checkbox');
     }
+    
+    // REVEAL IDDEN DIVIDER
+    else if (currentCheckboxIndex = checkboxes.length) {
+      hiddenDiv.style.display = 'block';
+    }
   }
-  
+
   // Add event listeners to the checkboxes
   checkboxes.forEach((checkboxes, index) => {
     checkboxes.addEventListener('click', () => checkboxClick(index));
   });
+
