@@ -34,6 +34,17 @@ document.getElementById('next-button').addEventListener('click', () => {
 
 updateSlide(); 
 
+
+// RESET BUTTON
+// source link for inspiration = https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+
+const resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener('click', function() {
+  window.location.reload();
+  window.scrollTo(0,0);
+});
+
 // CHECKBOX CLICK TRANSFORM
 
 const checkboxes = [
