@@ -1,6 +1,6 @@
 console.log('Hello World!')
 
-//INSTRUCTIONAL STEPS
+// INSTRUCTIONAL STEPS
 
 const slides = [
     "Welcome to Beerline Buddy!",
@@ -34,29 +34,39 @@ document.getElementById('next-button').addEventListener('click', () => {
 
 updateSlide(); 
 
-//TIMER
+// CHECKBOX CLICK TRANSFORM
 
-let [seconds, minutes] = [60,1];
-let displayTime = document.getElementById("displayTime");
-let timer = null;
-
-function stopwatch(){
-    seconds--;
-    if(seconds == 0){
-        seconds = 60;
-        minutes--;
-        if(minutes == 0){
-            minutes = 0;
-        }
+const checkboxes = [
+    document.getElementById('checkbox-one'),
+    document.getElementById('checkbox-two'),
+    document.getElementById('checkbox-three'),
+    document.getElementById('checkbox-four'),
+    document.getElementById('checkbox-five'),
+    document.getElementById('checkbox-six'),
+    document.getElementById('checkbox-seven'),
+    document.getElementById('checkbox-eight'),
+    document.getElementById('checkbox-nine'),
+    document.getElementById('checkbox-ten'),
+    document.getElementById('checkbox-eleven'),
+  ];
+  
+  // Track the currently clickable checkbox
+  let currentCheckboxIndex = 0;
+  
+  // Function to change the checkbox when clicked and activate the next checkbox
+  function checkboxClick(index) {
+    checkboxes[index].classList.remove('fa-circle');
+    checkboxes[index].classList.add('fa-circle-check');
+    checkboxes[index].classList.add('checkbox-selected');
+    
+    // Highlight/move to the next checkbox
+    currentCheckboxIndex++;
+    if (currentCheckboxIndex < checkboxes.length) {
+      checkboxes[currentCheckboxIndex].classList.remove('inactive-checkbox');
     }
-    displayTime.innerHTML = minutes +":"+ seconds;
-}
-
-function watchStart(){
-    if(timer!== null) 
-    {
-        clearInterval(timer);
-    }
-    timer = setInterval(stopwatch,1000);
-
-}
+  }
+  
+  // Add event listeners to the checkboxes
+  checkboxes.forEach((checkboxes, index) => {
+    checkboxes.addEventListener('click', () => checkboxClick(index));
+  });

@@ -99,6 +99,17 @@ body {
 
 }
 
+/* CHECKBOX STYLINGS */
+
+.checkbox-selected {
+    color: hotpink;
+}
+
+.inactive-checkbox {
+    pointer-events: none;
+    color: gray;
+}
+
 /* HIDDEN DIV */
 
 #hidden-div {
