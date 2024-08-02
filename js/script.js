@@ -78,7 +78,7 @@ const checkboxes = [
       checkboxes[currentCheckboxIndex].classList.remove('inactive-checkbox');
     }
     
-    // REVEAL IDDEN DIVIDER
+    // REVEAL HIDDEN DIVIDER
     else if (currentCheckboxIndex = checkboxes.length) {
       hiddenDiv.style.display = 'block';
     }
@@ -89,3 +89,79 @@ const checkboxes = [
     checkboxes.addEventListener('click', () => checkboxClick(index));
   });
 
+//TIMERS
+
+document.getElementById('timer-button-one').addEventListener('click', () => {
+
+  let timerOne = 900;
+  
+  const intervalOne = setInterval(() => {
+      timerOne--;
+  
+      const mm = Math.floor(timerOne / 60);
+      const ss = timerOne % 60;
+      
+      const constructMinutes = mm.toString().padStart(2, '0');
+      const constructSeconds = ss.toString().padStart(2, '0');
+  
+      document.getElementById('timer1').innerText = `${constructMinutes}:${constructSeconds}`;
+      if (timerOne < 1) {
+          clearInterval(intervalOne);
+          document.getElementById('timer1').innerText = "Pull through half a jug and start Timer 2";
+      }
+      console.log(timerOne);
+  }, 1000);
+  });
+  
+  //Timer Two
+  
+  document.getElementById('timer-button-two').addEventListener('click', () => {
+  
+  let timerTwo = 900;
+  
+  const intervalTwo = setInterval(() => {
+      timerTwo--;
+  
+      const mm = Math.floor(timerTwo / 60);
+      const ss = timerTwo % 60;
+      
+      const constructMinutes = mm.toString().padStart(2, '0');
+      const constructSeconds = ss.toString().padStart(2, '0');
+  
+      document.getElementById('timer2').innerText = `${constructMinutes}:${constructSeconds}`;
+      if (timerTwo < 1) {
+          clearInterval(intervalTwo);
+          document.getElementById('timer2').innerText = "Pull through half a jug and start Timer 3";
+      }
+      console.log(timerTwo);
+  }, 1000);
+  });
+  
+  //Timer Three
+  
+  document.getElementById('timer-button-three').addEventListener('click', () => {
+  
+      let timerThree = 900;
+  
+      //didnt use set interval, used setTimeout as set interval overlaps due to javascripts inability to adequately measure in fractions. (ex. 0.1 + 0.2 doesnt make 0.3 in console.)
+      const intervalThree = () => {
+          timerThree--;
+      
+          const mm = Math.floor(timerThree / 60);
+          const ss = timerThree % 60;
+          
+          const constructMinutes = mm.toString().padStart(2, '0');
+          const constructSeconds = ss.toString().padStart(2, '0');
+      
+          document.getElementById('timer-three').innerText = `${constructMinutes}:${constructSeconds}`;
+          if (timerThree < 1) {
+              document.getElementById('timer-three').innerText = "PULL COMPLETE";
+          }
+          else {
+            setTimeout(intervalThree, 1000);
+          }
+          console.log(timerThree);
+      };
+      setTimeout(intervalThree, 1000);
+      });
+  
