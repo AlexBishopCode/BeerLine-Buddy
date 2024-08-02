@@ -47,19 +47,8 @@ resetButton.addEventListener('click', function() {
 
 // CHECKBOX CLICK TRANSFORM
 
-const checkboxes = [
-    document.getElementById('checkbox-one'),
-    document.getElementById('checkbox-two'),
-    document.getElementById('checkbox-three'),
-    document.getElementById('checkbox-four'),
-    document.getElementById('checkbox-five'),
-    document.getElementById('checkbox-six'),
-    document.getElementById('checkbox-seven'),
-    document.getElementById('checkbox-eight'),
-    document.getElementById('checkbox-nine'),
-    document.getElementById('checkbox-ten'),
-    document.getElementById('checkbox-eleven'),
-  ];
+const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', 
+  'checkbox-four', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
   
   // Track the currently clickable checkbox
   let currentCheckboxIndex = 0;
@@ -67,31 +56,37 @@ const checkboxes = [
   let hiddenDiv = document.getElementById('hidden-div');
   
   // Function to change the checkbox when clicked and activate the next checkbox
-  function checkboxClick(index) {
-    checkboxes[index].classList.remove('fa-circle');
-    checkboxes[index].classList.add('fa-circle-check');
-    checkboxes[index].classList.add('checkbox-selected');
+  function checkboxClick(current, next) {
+    const checkbox = document.getElementById(current)
+    const nextCheckbox = document.getElementById(next)
+    if (checkbox) {
+      checkbox.classList.remove('fa-circle');
+      checkbox.classList.add('fa-circle-check');
+      checkbox.classList.add('checkbox-selected');
+    }
     
     // Highlight/move to the next checkbox
-    currentCheckboxIndex++;
-    if (currentCheckboxIndex < checkboxes.length) {
-      checkboxes[currentCheckboxIndex].classList.remove('inactive-checkbox');
+    if (nextCheckbox) {
+      nextCheckbox.classList.remove('inactive-checkbox')
     }
     
-    // REVEAL HIDDEN DIVIDER
-    else if (currentCheckboxIndex = checkboxes.length) {
-      hiddenDiv.style.display = 'block';
-    }
   }
 
   // Add event listeners to the checkboxes
-  checkboxes.forEach((checkboxes, index) => {
-    checkboxes.addEventListener('click', () => checkboxClick(index));
+  checkboxes.forEach((checkbox, index) => {
+    document.getElementById(checkbox).addEventListener('click', () => {
+      checkboxClick(checkbox, checkboxes[index + 1]);
+        if (index+1 === checkboxes.length) {
+        hiddenDiv.style.display = 'block';
+      }
+    }
+
+  );
   });
 
 //TIMERS
 
-function startTimer(timerContainer, timer = 900) {
+function startTimer(timerContainer, checkbox, timer = 900) {
   console.log('starting timer', timerContainer)
 
   const timeOut = 1000;
@@ -107,6 +102,8 @@ function startTimer(timerContainer, timer = 900) {
     document.getElementById(timerContainer).innerText = `${constructMinutes}:${constructSeconds}`;
     if (timer < 1) {
         document.getElementById(timerContainer).innerText = "PULL COMPLETE";
+        checkboxClick(null, checkbox);
+        document.getElementById(checkbox).addEventListener('click', () => checkboxClick(checkbox))
     }
     else {
       setTimeout(interval, timeOut);
@@ -118,8 +115,9 @@ setTimeout(interval, timeOut);
 }
 const buttons = ['timer-button-one', 'timer-button-two', 'timer-button-three']; 
 const buttonText = ['timer-one', 'timer-two', 'timer-three']; 
+const timedCheckboxes = ['checkbox-five', 'checkbox-six', 'checkbox-seven']; 
 buttons.forEach((button, index) => {
 
-  document.getElementById(button).addEventListener('click', () => startTimer(buttonText[index], 10));
+  document.getElementById(button).addEventListener('click', () => startTimer(buttonText[index], timedCheckboxes[index], 10));
 
 }) 
