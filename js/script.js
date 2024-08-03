@@ -48,7 +48,7 @@ resetButton.addEventListener('click', function() {
 // CHECKBOX CLICK TRANSFORM
 
 const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', 
-  'checkbox-four', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
+  'checkbox-four', 'checkbox-five', 'checkbox-six', 'checkbox-seven', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
   
   // Track the currently clickable checkbox
   let currentCheckboxIndex = 0;
@@ -59,10 +59,20 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three',
   function checkboxClick(current, next) {
     const checkbox = document.getElementById(current)
     const nextCheckbox = document.getElementById(next)
+
     if (checkbox) {
       checkbox.classList.remove('fa-circle');
       checkbox.classList.add('fa-circle-check');
       checkbox.classList.add('checkbox-selected');
+
+      let parentDiv = checkbox.parentElement; 
+      while (parentDiv && !parentDiv.classList.contains('step-div-box-bottom')) {
+          parentDiv = parentDiv.parentElement; 
+      }
+                
+       if (parentDiv) {
+           parentDiv.classList.toggle('parent-div-color-change'); 
+       }
     }
     
     // Highlight/move to the next checkbox
@@ -76,12 +86,10 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three',
   checkboxes.forEach((checkbox, index) => {
     document.getElementById(checkbox).addEventListener('click', () => {
       checkboxClick(checkbox, checkboxes[index + 1]);
-        if (index+1 === checkboxes.length) {
-        hiddenDiv.style.display = 'block';
-      }
-    }
-
-  );
+        if (index + 1 === checkboxes.length) {
+          hiddenDiv.style.display = 'block';
+        }
+      });
   });
 
 //TIMERS
@@ -101,7 +109,7 @@ function startTimer(timerContainer, checkbox, timer = 900) {
 
     document.getElementById(timerContainer).innerText = `${constructMinutes}:${constructSeconds}`;
     if (timer < 1) {
-        document.getElementById(timerContainer).innerText = "PULL COMPLETE";
+        document.getElementById(timerContainer).innerText = "Move to the next step.";
         checkboxClick(null, checkbox);
         document.getElementById(checkbox).addEventListener('click', () => checkboxClick(checkbox))
     }

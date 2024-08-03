@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color:lightskyblue;
+    background-color: whitesmoke;
 }
 
 /* INFO DIV */
@@ -15,15 +15,27 @@ body {
 
 #info-div {
     display: flex;
+    /* height: 100px; */
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .info-div-box {
     flex: 1;
-    padding: 10px;
+    /* padding: 10px; */
+    height: 100px;
     border: 1px solid red;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#info-text {
+    padding: 10px;
 }
 
 .wrapper-top, .wrapper-bottom {
@@ -34,8 +46,14 @@ body {
 /* RESET BUTTON */
 
 #reset-div {
-    padding: 10px;
+    /* padding: 10px; */
+    display: flex;
+    height: 50px;
     border: 1px solid red;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
 }
 
 /* STEP DIVS */
@@ -51,21 +69,34 @@ body {
     border: 1px solid red;
     display: flex;
     flex-direction: column;
+    
 }
 
 .step-div-box-top {
     padding: 10px;
     border: 1px solid purple;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: aquamarine;
 }
 
 .step-div-box-middle {
     padding: 10px;
     border: 1px solid orange;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+    vertical-align: middle;
+    display: flex;
+    background-color: white;
 }
 
 .step-div-box-bottom {
     padding: 10px;
     border: 1px solid green;
+    background-color: white;
 }
 
 /* TIMER DIVS */
@@ -86,11 +117,20 @@ body {
 .timer-div-box-top {
     padding: 10px;
     border: 1px solid purple;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .timer-div-box-middle {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
     border: 1px solid orange;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .timer-div-box-bottom {
@@ -118,6 +158,21 @@ body {
     display: none;
 }
 
+/* FONT SIZES */
+
+h2 {
+    font-size: small;
+}
+
+button {
+    font-size: x-small;
+}
+
+/* div color change */
+
+.parent-div-color-change {
+    background-color: yellow;
+
 /* MEDIA QUERY FOR LARGER SCREENS  */
 
 @media (min-width: 768px) {
@@ -133,6 +188,7 @@ body {
 
     #reset-div {
         flex: 1; 
+        height: 100px;
     }
 
     .wrapper-top, .wrapper-bottom {
