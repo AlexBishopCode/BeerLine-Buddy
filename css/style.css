@@ -27,8 +27,8 @@ body {
     font-size: large;
     font-weight: normal;
     font-style: oblique;
-    background-color: #D8E0D9;
-    padding: 10px;
+    /* background-color: #D8E0D9; */
+    /* padding: 10px; */
     border-radius: 0 0 10px 10px;
 }
 
@@ -231,7 +231,7 @@ h2 {
     height: 100%;
     width: 100%;
     border: none;
-    background-color: #E0D2B1;
+    background-color: white;
     border-radius: 10px;
     font-weight: bold;
     font-size: xx-large;
@@ -239,7 +239,7 @@ h2 {
 }
 
 .next-previous-buttons:hover {
-    background-color: white;
+    background-color: #E0D2B1; 
     transition: background-color 0.3s ease; 
 }
 
@@ -252,6 +252,11 @@ h2 {
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: white;
+    transition: background-color 0.3s ease; 
 }
 
 .button {
