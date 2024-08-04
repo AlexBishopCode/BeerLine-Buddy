@@ -1,4 +1,3 @@
-console.log('Hello World!');
 
 // INSTRUCTIONAL STEPS
 
@@ -51,14 +50,15 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three',
   'checkbox-four', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
   
   // Track the currently clickable checkbox
+  
   let currentCheckboxIndex = 0;
 
   let hiddenDiv = document.getElementById('hidden-div');
   
   // Function to change the checkbox when clicked and activate the next checkbox
   function checkboxClick(current, next) {
-    const checkbox = document.getElementById(current)
-    const nextCheckbox = document.getElementById(next)
+    const checkbox = document.getElementById(current);
+    const nextCheckbox = document.getElementById(next);
 
     if (checkbox) {
       checkbox.classList.remove('fa-circle');
@@ -77,7 +77,7 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three',
     
     // Highlight/move to the next checkbox
     if (nextCheckbox) {
-      nextCheckbox.classList.remove('inactive-checkbox')
+      nextCheckbox.classList.remove('inactive-checkbox');
     }
     
   }
@@ -97,7 +97,7 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three',
 //TIMERS
 
 function startTimer(timerContainer, checkbox, timer = 900) {
-  console.log('starting timer', timerContainer)
+  console.log('starting timer', timerContainer);
 
   const timeOut = 1000;
   const interval = () => {
@@ -113,7 +113,7 @@ function startTimer(timerContainer, checkbox, timer = 900) {
     if (timer < 1) {
         document.getElementById(timerContainer).innerText = "Move to the next step.";
         checkboxClick(null, checkbox);
-        document.getElementById(checkbox).addEventListener('click', () => checkboxClick(checkbox))
+        document.getElementById(checkbox).addEventListener('click', () => checkboxClick(checkbox));
     }
     else {
       setTimeout(interval, timeOut);
@@ -130,4 +130,4 @@ buttons.forEach((button, index) => {
 
   document.getElementById(button).addEventListener('click', () => startTimer(buttonText[index], timedCheckboxes[index], 10));
 
-}) 
+});
