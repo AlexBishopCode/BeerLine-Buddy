@@ -76,38 +76,32 @@ Click here to view wireframes: https://drive.google.com/drive/folders/1sStum-9PV
 
 Fonts were imported into the code from [Google Fonts](https://fonts.google.com/).
 
-- The main logo uses the font 'Fredoka'. This font was chosen for the logo after some research into font stylings that draw inspiration from the 1960s - an era heavily associated with Soho and Carnaby Street.
-- The logo is a big, round and friendly font that is also bold and simple in design. This choice of font means the the logo always stands out, creating contrast against the simplistic styling of the secondary font.
-- It seemed appropriate to use this font as it can immiediately be associated with the history of the area which in turn is immediately relevant due to the historical themes explored within the walking tours.
-- The secondary font is 'Roboto', a sens-serif font. The font is simple and creates a frictionless reading experiene. The simplicity of the font creates a nice contrast to the 'Fredoka' logo font and ensures all information on the web page is clear and easy to read. A mixture of bold, italic and light variants of the 'Roboto' font have been used to create contrast between headers and paragraphs.
+- All font on the page uses the 'Poppins' Google font.
+As a Google Font, Poppins is optimized for web use, ensuring fast loading times and high-quality rendering on all devices. Poppins modern and professional appearance makes it an excellent choice for tutorials, where readability is crucial.
 
 <hr>
 
 ### Icons
 
-- Icons from the 'Fontawesome' Icon library have been utilised as classes within i tags.
+- Icons from the 'Fontawesome' Icon library have been utilised for the step and timer step checkboxes as well as the previous and next icons in the info-div. 
 - The icons have been styled cohesively with the overarching color palette.
-- Icons present within the accesssibility section of the web page are displayed in a blue (#2E2999) color as this color is believed to encourage a perception of trust.
-- Social media icons have been positioned within the web page footer. By utilising the 'a' tag these icons have associated hyperlinks. Now the user can identify the speicifc social media platform based on each platforms iconic logo and access the hyperlink immediately with one click. 
 
 <hr>
 
 ### Colors
 
-With the user and business goals in mind, it is important for this site to have a minimalist color palette. The color palette needs to appear professional and needs to constrast where appropriate to make the content clear and easy-to-read whilst also ensuring that the page has character.
+With the user and business goals in mind, it is important for this site to have a minimalist color palette. The color palette needs to appear professional and needs to constrast where appropriate to make the content clear and easy-to-read.
 
-![Image of the site color palette](assets/documents/readme-images/readme-coolors.png)
+![Image of the site color palette](assets/images/blb-colorswatch.png)
 
+- 'White smoke' #F5F5F5, 'White' #FFFFFF, 'Platinum' #D8E0DA
+The combination of platinum, white smoke, and white forms a sophisticated and stylish color scheme. Their subtle contrasts and modern appeal provide a clean, elegant appearance while ensuring visual clarity and harmony. The combination of whitesmoke and platinum evokes the imagery of beer kegs and casks in a cellar, aligning perfectly with the website's theme.
 
-- 'Dun' #DCD0B6 - This gentle color is used the provide character and as a background to distinguish between sections of the web page. The color mirrors the building walls on the hero image and ensures the page feels familiar for the full length of the web page. The color along-side the hero image is intended to evoke imagery of an urban area such as Soho.
+- 'Emerald' #50C878
+Emerald is a rich, vibrant shade of green that stands out well against most backgrounds, making the checked state of the checkbox easily noticeable.
 
-- 'Whitesmoke' #F5F5F5 - A comfortbale off-white. This color provides a perfect canvas for bold easy-to-read text on large sections of the website whilst also providing more character than a stark bright white.
-
-- 'Jet #323232 - A dusty shade of black. This color has been used to add an element of sophistication to the font color on the website. This variation of black suggests age and mystery, reflecting the nature of the walking tours. This color is chosen for our font-styles to stand out on a pale background.
-
-- 'International Klein Blue' #2E2999 - A deep blue which is sure to stand out against a pale background color. The blue has been used for icons, as a hover animation stylings and for some text to amphasise certain sections of the site.
-This color is said to suggest responsibility amd trust and is utilised to make the user feel at ease when using this service.
-
+- 'Melon' #F5A9A1
+Melon contrasts well with the softer colors of platinum, whitesmoke, and white, adding a touch of vibrancy while keeping a professional look. This makes the reset button both noticeable and easy to use.
 
 <hr>
 
@@ -125,49 +119,42 @@ This webpage intentionally excludes images to maintain a focus on providing clea
 
 ##### Logo / Header
 
-A large hero image spans the full width of the page and is the first image the user sees upon entering the site. The large image is designed to immediatley grab the users attention as they land on the site. 
+A simple, bold header along side an informative tag loine both in the Poppins font enhances the page design by providing clear, immediate emphasis and readability. 
 
-The hero image uses responsive stlying to ensure all screen sizes can faciltiate the image and keep the page elements visually proportionate to the page width.
-
-![Hero image screenshot on a desktop](assets/documents/readme-images/readme-hero-img.png)
+![Logo screenshot on a desktop](assets/images/blb-logoscreenshot:png.png)
 
 <hr>
 
 ##### Information Slides
 
-The navigation bar contains a promient logo and is responsive so that on larger screens it displays all the page menu links in a row and on smaller screens the manu links are contained within a drop down menu after clicking a burger icon.
+![information Slides Screenshot on a desktop](assets/images/blb-infoslidesscreenshot.png)
 
-The menu options on the nav bar have animated CSS styling so that they appear blue when you hover over the text, drawing attention to the options as you select.
+The information slides are displayed to provide the user with instructions on how to use the web page and the step/checkbox format. 
+The slides are managed by a JavaScript array which holds each slides content, each slide is indexed sequentially.
+The arrow buttons (previous and next) adjust the current slide index, enabling the display to change text as the code iterates through the array.
+Using the array to track slide numbers makes navigating between slides smooth and easy.
 
-The position of the navigation bar is sticky so that when users scroll down the page the menu navigation bar remains at the top of the page. This feature allows the user to access the menu items quickly and at all times, saving time and providing a more positive user experience.
-
-A box shadow has been added to the navigation bar and the drop down menu to ensure the menu bar remains prominent and stands out on the page.
-
-![Hero image screenshot on a desktop](assets/documents/readme-images/readme-nav-bar-desktop.png)
-
-![Navigation bar screenshot on a desktop](assets/documents/readme-images/readme-nav-bar-phone.png)
 
 <hr>
 
 #### Reset Button
 
-The info bar is located immediately below the navigation bar. The info bar is immediatley visible as the user lands on the web page.
+![Rest button screenshot on a desktop](assets/images/blb-resetscreenshot.png)
 
-The icons and text on this ribbon section provide clear and impactful information which immedialtely informs the user what services are provided. 
+The reset button stands out due to its distinct color, making it easily recognizable on the page. When clicked (with the use of a 'click' event listener), it refreshes the webpage, clearing all current entries and resetting the content. Additionally, the page scrolls back to the top, giving the appearance of a fresh start.
 
-The icons are easily recongisable to all users, are visually striking and make the services and purpose of the company more understandable.
+This button is designed to simplify the process of resetting the page, it is especially useful for starting a new beer line cleaning process or quickly correcting any mistakes. It provides users with a straightforward way to restart and ensure everything is set up correctly.
 
-The info bar has been constructed within a grid where the icons and their associated text appear in two columns on smaller screens, and within a row on larger screens. This styling ensures the website remains visually proportionate.
+Since users generally read from left to right, I placed the reset button to the right of the info-div on larger screens. I wanted the info-div to be more noticeable when users first visit the desktop version of the webpage.
 
-Users tend to read from left to right, an icon of a walking person with text saying 'walking tours' has been positioned on the left of the info bar. This is so that users immediately distinguish the main service the business is offering. This leaves less room for ambiguity created by the somewhat ambiguous brand name. 
 
-![Info bar screenshot on a desktop](assets/documents/readme-images/readme-info-bar.png)
-
-![Info bar section screenshot on a mobile](assets/documents/readme-images/readme-info-mobile.png)
-
+ 
 <hr>
 
 #### Step Dividers
+
+![Step dividers screenshot on a desktop](assets/images/blb-stepscreenshot.png)
+
 
 The tours section includes information regarding the three tours that are currently available to the user.
 
