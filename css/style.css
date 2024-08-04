@@ -1,9 +1,35 @@
+/* // Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
+    font-family: Poppins, sans-serif;
     color: black;
+    font-weight: normal;
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: #F2F2F2;
+}
+
+/* LOGO SECTION */
+
+#logo {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    background-color: #D8E0D9;
+    border-radius: 10px 10px 0 0px;
+    padding: 10px;
+}
+
+#logo-description {
+    text-align: center;
+    font-size: large;
+    font-weight: normal;
+    font-style: oblique;
+    background-color: #D8E0D9;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 /* INFO DIV */
@@ -20,36 +46,44 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-radius: 10px;
 }
 
 .info-div-box {
     flex: 1;
-    /* padding: 10px; */
+    padding: 10px;
     height: 100px;
-    border: 1px solid red;
+    max-width: 100%;
+    /* border: 1px solid red; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
 #info-text {
-    padding: 10px;
+    font-size: x-small;
+    /* border: 1px solid black; */
+    height: 100%;
+    min-width: 100%;
+    align-content: center;
+    background-color: white;
+    border-radius: 10px;
+    font-style: oblique;
 }
 
 .wrapper-top, .wrapper-bottom {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 /* RESET BUTTON */
 
 #reset-div {
-    /* padding: 10px; */
+    padding: 10px;
+    height: 40px;
     display: flex;
-    height: 50px;
-    border: 1px solid red;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -66,7 +100,7 @@ body {
 .step-div-box {
     flex: 1;
     padding: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     
@@ -74,16 +108,18 @@ body {
 
 .step-div-box-top {
     padding: 10px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     align-items: center;
     justify-content: center;
-    text-align: center;
-    background-color: aquamarine;
+    text-align: left;
+    background-color: #D8E0D9;
+    border-radius: 0 20px 0 0;
+    font-weight: bold;
 }
 
 .step-div-box-middle {
     padding: 10px;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -91,12 +127,18 @@ body {
     vertical-align: middle;
     display: flex;
     background-color: white;
+    font-size: x-small;
 }
 
 .step-div-box-bottom {
     padding: 10px;
-    border: 1px solid green;
+    max-height: 48px;
+    /* border: 1px solid green; */
     background-color: white;
+    border-radius: 0 0 0 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
 }
 
 /* TIMER DIVS */
@@ -109,40 +151,56 @@ body {
 .timer-div-box {
     flex: 1;
     padding: 10px;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
 }
 
 .timer-div-box-top {
     padding: 10px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
+    border-radius: 0 20px 0 0;
+    background-color: #D8E0D9;
+    font-weight: bold;
 }
 
 .timer-div-box-middle {
     display: flex;
     flex-direction: column;
     padding: 5px;
-    border: 1px solid orange;
+    background-color: white;
+    /* border: 1px solid orange; */
     height: 100px;
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: x-small;
 }
 
-.timer-div-box-bottom {
+/* .timer-div-box-bottom {
     padding: 10px;
     border: 1px solid green;
-
-}
+    /* border-radius: 0 0 0 20px; */
 
 /* CHECKBOX STYLINGS */
 
+.fa-circle {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-circle:hover {
+    background-color: #e0e0e0; /* Slightly darker gray */
+    font-size: 22px;
+    transform: scale(1.15); /* Gradual increase in size */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Circular shadow effect */
+    color: green;
+}
 .checkbox-selected {
-    color: hotpink;
+    color: #FFFFFF;
+    font-size: 22px;
 }
 
 .inactive-checkbox {
@@ -154,24 +212,58 @@ body {
 
 #hidden-div {
     padding: 10px;
-    border: 1px solid red;
+    border: 1px solid black;
     display: none;
 }
 
 /* FONT SIZES */
 
 h2 {
-    font-size: small;
+    font-size: x-small;
 }
 
-button {
+.next-previous-buttons {
     font-size: x-small;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: #E0D2B1;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.next-previous-buttons:hover {
+    background-color: white;
+    transition: background-color 0.3s ease; 
+}
+
+#reset-button {
+    font-size: x-small;
+    height: 100%;
+    width: 100%;
+    background-color: #F4A9A1;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button {
+    font-size: x-small;
+    height: 50px;
+    width: max-content;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
 
 /* div color change */
 
 .parent-div-color-change {
-    background-color: yellow;
+    background-color: #50C878;
+    transition: background-color 0.5s ease; /* Smooth transition */
+}
 
 /* MEDIA QUERY FOR LARGER SCREENS  */
 
@@ -183,7 +275,8 @@ button {
     }
 
     #info-div {
-        flex: 3; 
+        flex: 3;
+        border-radius: 10px;
     }
 
     #reset-div {
@@ -192,7 +285,7 @@ button {
     }
 
     .wrapper-top, .wrapper-bottom {
-      flex-direction: row; 
+      flex-direction: row;
       justify-content: space-between; 
     }
   
@@ -202,5 +295,9 @@ button {
 
     #step-eight-nine-div, #step-ten-eleven-div {
         flex: 1; 
-      }
-  }
+    }
+
+    .step-div-box-middle {
+        font-size: small;
+    }
+}

@@ -48,7 +48,7 @@ resetButton.addEventListener('click', function() {
 // CHECKBOX CLICK TRANSFORM
 
 const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', 
-  'checkbox-four', 'checkbox-five', 'checkbox-six', 'checkbox-seven', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
+  'checkbox-four', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
   
   // Track the currently clickable checkbox
   let currentCheckboxIndex = 0;
