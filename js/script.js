@@ -88,6 +88,8 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three',
       checkboxClick(checkbox, checkboxes[index + 1]);
         if (index + 1 === checkboxes.length) {
           hiddenDiv.style.display = 'block';
+          //The page scrolls to the bottom during this condition.
+          window.scrollTo(0, document.body.scrollHeight);
         }
       });
   });

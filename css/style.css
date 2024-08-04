@@ -211,9 +211,13 @@ body {
 /* HIDDEN DIV */
 
 #hidden-div {
-    padding: 10px;
-    border: 1px solid black;
     display: none;
+    border-radius: 20px;
+    background-color: #50C878;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
 }
 
 /* FONT SIZES */
