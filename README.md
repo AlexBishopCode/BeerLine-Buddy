@@ -43,6 +43,7 @@ The business goals include:
 
 - To ensure all staff (old and new) are able to fully clean a beer line and use the app when required to act as a prompt and informative guide.
 - To increase the sale of beer by minimising the time spent cleaning the lines.
+- To have a web page that is easy to access and is fully responsive to both tablets and mobile devices as both are utilised in this workplace.
 
 <hr>
 
@@ -235,10 +236,11 @@ An option for the user to sign up for a newsletter has been added using radiobut
 ### Languages
 - Html - Used for page markup
 - CSS - Used for styling
+- Javascript - Used for DOM manipulation
 
 ### Libraries
-- Google Fonts - Used for font styles ('Fredoka' and 'Roboto').
-- Font Awesome - Icons within the info-bar, accessibility section and footer.
+- Google Fonts - Used for font style ('Poppins').
+- Font Awesome - Used for retreiving the 'next' and 'previous' button arrows and the checkbox icons.
 
 ### Platforms
 - Gitpod - IDE for project developemnt.
@@ -247,7 +249,7 @@ An option for the user to sign up for a newsletter has been added using radiobut
 ### Other Tools Utilised
 - Coolers - For color selection and color swatch.
 - SMPRO - App utilised for framing web page screengrabs with iphone/ipad/macbook.
-- Favicon - A generator used to create a favicon.
+- 
 
 ### TESTING
 
@@ -256,7 +258,7 @@ An option for the user to sign up for a newsletter has been added using radiobut
 ##### Validation Process
 - The HTML and CSS files have been validated with W3C HTML/CSS Validator, with no errors or warnings to show.
 - The site has been tested against the google devtools lighthouse service to ensure accessibility is at 100%.
-- The web page has been manually tested for screen reader compatibility using the Google Chrome screen reader extension with no aparent defects noted.
+<!-- - The web page has been manually tested for screen reader compatibility using the Google Chrome screen reader extension with no aparent defects noted. -->
 
 ##### GENERAL TESTING
 
@@ -288,9 +290,13 @@ Below are the results from the CSS, html and accessibility checks.
 #### BUGS
 
 ##### Existing Bugs
-- The hero image does not fully cover the hero div within a narrow screensize specifity on some specific screen sizes when tested. 
+- The countdown timers do not function harmoniously with their associated checkboxes. The checkboxe should only be allowed to be clicked once the timers have been completed. 
 
 ##### Fixed Bugs
+- Timer bug #1, I was originaly using 'setInterval' to execute the function during the timers and noticed that the time displayed during the countdown timers was oddly incrementing by a few seconds now and again. After some research I realised that this was due to the nature of 'setIntervals' and its accumulative delay. I found that using the 'setTimeout' feature instead ensures the next execution of the function only occurs when the previous execution has occured thus leading to a more accurate countdown with no glitches.
+
+- Timer bug #2
+- Timer bug #3
 - The fixed (sticky) navigation bar at the top of the page was covering sections of text when utilised so the associated sections of the site you were expecting to navigate to appeared muddled and unclear. This was fixed by adding a hidden div above each section the same height of the nav bar and linking each nav bar menu option to the appropriate hidden divs in order for the user to see the full content of the section they choose to view.
 
 - The booking form loaded an error message once details had been entered saying the page visited was not secure. This was due to a typo in the target="" where https:// was written as http://.
