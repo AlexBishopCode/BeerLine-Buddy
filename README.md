@@ -156,45 +156,22 @@ Since users generally read from left to right, I placed the reset button to the 
 ![Step dividers screenshot on a desktop](assets/images/blb-stepscreenshot.png)
 
 
-The tours section includes information regarding the three tours that are currently available to the user.
-
-Three sections of informative text have been presented on top of three separate images. Each image is related to its respective text.
-
-Images have been used here to communicate the purpose of each tour and to help the user distinguish between the tours, giving a sense of variety.
-
-Each of the three tours have been styled into a flexbox grid. The flex value allows for a media query to be utilised and to position the content side by side in three columns on larger screens and stacked on top of one another on smaller screens.
-
-The width of the images within the content are all fully resonsive to adjustments in screen size.
-
-![Tours section screenshot on a desktop](assets/documents/readme-images/readme-tours-png.png)
-
-![Tours section screenshot on a mobile](assets/documents/readme-images/readme-tours-mobile.png)
 
 <hr>
 
 #### Timer dividers
 
-The accessibility information section includes four divs within a flexbox grid. Each div contains clear information and icons to provide users wishing to learn more about the accessibility of the tours with more information. 
-
-The flexbox grid allows the information to be responsive to changes in screen size and the content changes column formation via a screen size media query.
-
-![Accessibility section on a desktop](assets/documents/readme-images/readme-accessibility.png)
+![Timer steps on a desktop](assets/images/blb-timerstepscreenshot.png)
 
 <hr>
 
 #### Hidden Divider
 
-The sign up section is created using a form element. The form is designed to be simple and easy to use.
+![Hidden Div screenshot on a desktop](assets/images/blb-hiddendivscreenshot.png)
 
-Positioning the form at the bottom of the site ensures the user flow is not interrupted. When the user flow is interrupted it can encourage user abandoment. 
+#### Footer
 
-The simple design is purposeful to ensure that the process of completing the form appears easy and streamlined.
-
-An option for the user to sign up for a newsletter has been added using radiobuttons at the bottom of the form to allow them to give permission for further information and promotional material to be sent to their email.
-
-![Sign up form screenshot on a desktop](assets/documents/readme-images/readme-form.png)
-
-![Sign up form screenshot on a desktop](assets/documents/readme-images/readme-signup-target.png)
+![Footer screenshot on a desktop](assets/images/blb-footerscreenshot.png)
 
 ## Feature Ideas
 
@@ -285,9 +262,7 @@ This site has been deployed to GitHub pages via the following steps:
 - Within the settings tab, the 'pages' menu option in the left hand column was opened.
 - Within 'pages', the settings for the branch were changed to ensure this was set to the 'main' branch. After this the 'Save' button was clicked.
 
-The live link to the site can be accessed [here](https://alexbishopcode.github.io/60-Minute-Soho/)
-
-https://alexbishopcode.github.io/60-Minute-Soho/
+The live link to the site can be accessed here: https://alexbishopcode.github.io/BeerLine-Buddy/
 
 #### CREDITS AND CONTACT
 
