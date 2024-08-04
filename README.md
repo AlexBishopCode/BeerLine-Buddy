@@ -113,21 +113,7 @@ This color is said to suggest responsibility amd trust and is utilised to make t
 
 ### Images
 
-A full-quality hero image (displayed below) is utilised at the top of the page so the user immediatley understands that the service provided operates in Soho. The hero image is taken on a day with blue skies to appear friendly and welcoming to the user which helps to influence user engagement.
-
-![hero-image](https://github.com/AlexBishopCode/60-Minute-Soho/assets/171177957/8afef584-6f34-452a-9909-f2e0e66b698f)
-
-
-The three images (displayed below) utilised within the tours section were chosen due to their association with each of the themed walks. This is to provide the user with a small glimpse into the kinds of things they will encounter on each specific tour.
-
-![soho-sound-img](https://github.com/AlexBishopCode/60-Minute-Soho/assets/171177957/c0ef3fb4-9704-488e-9604-b6ec6fa79542)
-![beating-art-img](https://github.com/AlexBishopCode/60-Minute-Soho/assets/171177957/c99363df-071f-4858-a842-0bfab2911ffc)
-![building-soho-img](https://github.com/AlexBishopCode/60-Minute-Soho/assets/171177957/6273b45f-4dec-40a5-be13-368016e5653e)
-
-
-All images chosen are of a high quality so that they appear clear and crisp.
-
-All images have the necessary stylings so that they adjust seamlessly to ensure they remain at an adequate level of prominance on all screen-sizes.
+This webpage intentionally excludes images to maintain a focus on providing clear and straightforward information. The design prioritizes simplicity and functionality. However, instructional images may be added in the future to visually enhance each step and improve understanding.
 
 ### FEATURES
 
@@ -137,7 +123,7 @@ All images have the necessary stylings so that they adjust seamlessly to ensure 
 
 <hr>
 
-##### Hero Image
+##### Logo / Header
 
 A large hero image spans the full width of the page and is the first image the user sees upon entering the site. The large image is designed to immediatley grab the users attention as they land on the site. 
 
@@ -147,7 +133,7 @@ The hero image uses responsive stlying to ensure all screen sizes can faciltiate
 
 <hr>
 
-##### Nav Bar
+##### Information Slides
 
 The navigation bar contains a promient logo and is responsive so that on larger screens it displays all the page menu links in a row and on smaller screens the manu links are contained within a drop down menu after clicking a burger icon.
 
@@ -163,7 +149,7 @@ A box shadow has been added to the navigation bar and the drop down menu to ensu
 
 <hr>
 
-#### Info Bar
+#### Reset Button
 
 The info bar is located immediately below the navigation bar. The info bar is immediatley visible as the user lands on the web page.
 
@@ -181,7 +167,7 @@ Users tend to read from left to right, an icon of a walking person with text say
 
 <hr>
 
-#### Tours Info Section
+#### Step Dividers
 
 The tours section includes information regarding the three tours that are currently available to the user.
 
@@ -199,7 +185,7 @@ The width of the images within the content are all fully resonsive to adjustment
 
 <hr>
 
-#### Accessibility Info Section
+#### Timer dividers
 
 The accessibility information section includes four divs within a flexbox grid. Each div contains clear information and icons to provide users wishing to learn more about the accessibility of the tours with more information. 
 
@@ -209,7 +195,7 @@ The flexbox grid allows the information to be responsive to changes in screen si
 
 <hr>
 
-#### Sign Up Section
+#### Hidden Divider
 
 The sign up section is created using a form element. The form is designed to be simple and easy to use.
 
@@ -290,10 +276,11 @@ Below are the results from the CSS, html and accessibility checks.
 #### BUGS
 
 ##### Existing Bugs
-- The countdown timers do not function harmoniously with their associated checkboxes. The checkboxe should only be allowed to be clicked once the timers have been completed. 
+- The countdown timers do not properly synchronize with their associated checkboxes. The checkboxes should only be clickable once the timers have finished.
+ As a result of the above, the decision was made to adjust the checkbox array to include checkboxes five, six and seven so that the sequential nature of the checkboxes made sense. 
 
 ##### Fixed Bugs
-- Timer bug #1, I was originaly using 'setInterval' to execute the function during the timers and noticed that the time displayed during the countdown timers was oddly incrementing by a few seconds now and again. After some research I realised that this was due to the nature of 'setIntervals' and its accumulative delay. I found that using the 'setTimeout' feature instead ensures the next execution of the function only occurs when the previous execution has occured thus leading to a more accurate countdown with no glitches.
+- Timer bug #1 - Initially, I used setInterval to manage the countdown timers, but I observed that the displayed time occasionally advanced by several seconds. This discrepancy was due to the cumulative delay associated with setInterval. After researching the issue, I discovered that using setTimeout instead provided a more accurate countdown. setTimeout ensures that the next execution of the function only begins once the previous execution is fully complete, resulting in a more reliable and glitch-free countdown.
 
 - Timer bug #2
 - Timer bug #3
@@ -301,13 +288,13 @@ Below are the results from the CSS, html and accessibility checks.
 
 - The booking form loaded an error message once details had been entered saying the page visited was not secure. This was due to a typo in the target="" where https:// was written as http://.
 
-- Accessibility performance initially failed in testing due to a lack of contrast between a previous blue utilised for font-color on the site. After changing blue to a darker shade the accessibility rating checked provided a successful score of 100.
+- Accessibility performance initially failed in testing due to a lack of aria-labels on the reset, next, previous and start buttons. Aria labels were added to all buttons and the accessibility check provided a successful score of 100.
 
 ##### DEPLOYMENT
 
 This site has been deployed to GitHub pages via the following steps:
 
-- Within the GitHub 60-Minute-Soho repository, the settings tab was opened.
+- Within the GitHub BeerLine-Buddy repository, the settings tab was opened.
 - Within the settings tab, the 'pages' menu option in the left hand column was opened.
 - Within 'pages', the settings for the branch were changed to ensure this was set to the 'main' branch. After this the 'Save' button was clicked.
 
@@ -319,9 +306,9 @@ https://alexbishopcode.github.io/60-Minute-Soho/
 
 ##### Content
 
-All text on the site was written by myself from scratch with research conducted on [Wikipedia](https://www.wikipedia.org) pages for some factual content on the tours section text.
+All text on the web page was written by myself from scratch with prior knowledge of the topic.
 
-The Love Running Project on the [Code Institute](https://www.codeinstitute.net) Full Stack Web Development Course was used as a loose template to create some of the general framework of the site. 
+The Love Maths Project on the [Code Institute](https://www.codeinstitute.net) Full Stack Web Development Course was used as a loose template to create some of the general framework of the site. 
 Most notably the code from the Love Running project was utilised to create the foundation of the navigation bar, the sign up form and the social media links before developing and adapting these to be coherant with my web page design and distinguished functions for this project.
 
 The Sample Project README.md section of the Full Stack Web Development course on [Code Institute](https://www.codeinstitute.net) was used as a guide to understand the content required to be present within a README.md file.
