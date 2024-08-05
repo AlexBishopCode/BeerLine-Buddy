@@ -229,11 +229,11 @@ The footer at the bottom of the page credits myself as the creator of the site. 
 
 - Each time a feature was added a preview port was opened to test the website to view the impact of the changes and to note any immediate bugs.
 - Adaptations were made to the stylings on the google dev tools service whilst previewing the web page to manipulate and experiment with stylings outside of the gitpod IDE.
-- The web bage was sent to friends and family for testing, with feedback being documented and acted upon.
+- The web page was sent to friends and family for testing, with feedback being documented and acted upon.
 - The form within the web page has been fully validated and will not send without the propper validation (all inputs containing the required information).
 - All external links have been tested and each open in a new tab.
 
-Below are the results from the CSS, html and accessibility checks.
+Below are the results from the CSS, html, JavaScript, Performance and Accessibility checks.
 
 CSS VALIDATOR RESULT:
 
