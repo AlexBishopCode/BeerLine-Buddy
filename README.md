@@ -275,9 +275,11 @@ PERFORMANCE AND ACCESSIBILITY VALIDATOR RESULT:
 
 - Timer bug #2 - The timers behave erratically when clicked multiple times, which is caused by overlapping timer functions. To fix this, I implemented a system to track active timers. This system maintains a list of running timers and checks if a timer is already active before starting a new one. Once a timer finishes, it is removed from the list, allowing a new timer to be started if needed.
 
-- You were previously able to uncheck the checkboxes after you had checked them, so I added logic to the event listener after it has been checked so that users cant interact with it again.
+- The user was previously able to uncheck the checkboxes after they had checked them, logic was then added to the event listener after it has been checked so that users cannot interact with that checkbox it again.
 
 - Accessibility performance initially failed in testing due to a lack of aria-labels on the reset, next, previous and start buttons. Aria labels were added to all buttons and the accessibility check provided a successful score of 100.
+
+- Accessibility performance failed once more as the color of the footer text didnt provide enough contrast against the background for readability. The font color was then changed to black to ensure its readabilily was sufficient.
 
 
 ##### DEPLOYMENT
@@ -298,14 +300,12 @@ All text content on the web page was written by myself from scratch from my prio
 
 The javascript educational content from Mosh's "Ultimate JavaScript Part 1: Fundamentals" was extensively utilised throughout this project. Whilst any uncited JavaScript code used in this project is original, Mosh's course served as a significant source of inspiration and provided valuable insights into various topics. For more information, you can visit [Mosh's course. ](https://members.codewithmosh.com/)
 
-The infocmative slide section code heavily adapted but inspired by Javascript Image slider tutorial by @smartcode9021 on YouTube.
+The Javascript code utilised for the informative slide section was inspired by JavaScript code within the Image slider tutorial by @smartcode9021 on YouTube.
 
-The reload https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+The reload click event listener was taken from the following link https://developer.mozilla.org/en-US/docs/Web/API/Location/reload. The basic code was taken from this example but adapted and built upon for my specific needs.
 
 AI powered generator 'ChatGPT' was utilised whilst creating the timer - specifically whilst
-constructing the mintues and seconds as this was a totally new concept to me and one which I found difficult to source via online tutorials - https://chatgpt.com/
-
-The Love Maths Project on the [Code Institute](https://www.codeinstitute.net) Full Stack Web Development Course was used as a loose template to create some of the general framework of the site. 
+converting the mintues and seconds into strings and for utilising the padStart method as this was a totally new concept to me and one which I found difficult to source via online tutorials. The code suggestion provided by the AI answer was adapted to suit my own specific needs and to ensure it was not a direct replica of the provided suggestion - https://chatgpt.com/
 
 The following page on https://css-tricks.com was used to assist with transition CSS Stylings - https://css-tricks.com/almanac/properties/t/transition/
 
