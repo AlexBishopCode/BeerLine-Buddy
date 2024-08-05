@@ -1,7 +1,8 @@
 
 // INSTRUCTIONAL STEPS
+// Source Details - code heavily adapted but inspired by Javascript Image slider tutorial by @smartcode9021 on YouTube.
 
-const slides = [
+const slides = [ // Array of slides for the info-div
     "Welcome to Beerline Buddy!",
     "Follow the steps below to ensure your beer line is clean",
     "Before you start, you will need two buckets, some line cleaner and some litmus paper.",
@@ -11,6 +12,12 @@ const slides = [
 
 let currentSlide = 0;
 
+/** 
+ * This function updates the displayed slide content and adjusts the state of 
+ * the Previous and Next buttons based on the current slide index. It ensures 
+ * that the navigation buttons are appropriately enabled or disabled to reflect
+ * the user's position within the slide presentation.
+ */
 function updateSlide() {
     document.getElementById('info-text').innerText = slides[currentSlide];
     document.getElementById('previous-button').disabled = currentSlide === 0;
@@ -40,22 +47,22 @@ updateSlide();
 const resetButton = document.getElementById("reset-button");
 
 resetButton.addEventListener('click', function() {
-  window.location.reload();
-  window.scrollTo(0,0);
+  window.location.reload(); // Reloads the window
+  window.scrollTo(0,0); // Ensure the page scrolls to the top
 });
 
 // CHECKBOX CLICK TRANSFORM
 
-const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', 
+const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is creating an array of all of the available checkboces
   'checkbox-four', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
   
-  // Track the currently clickable checkbox
-  
-  let currentCheckboxIndex = 0;
+  let currentCheckboxIndex = 0; // Track the currently clickable checkbox
 
   let hiddenDiv = document.getElementById('hidden-div');
   
-  // Function to change the checkbox when clicked and activate the next checkbox
+  /** 
+  * Function to change the checkbox when clicked and activate the next checkbox
+  */
   function checkboxClick(current, next) {
     const checkbox = document.getElementById(current);
     const nextCheckbox = document.getElementById(next);

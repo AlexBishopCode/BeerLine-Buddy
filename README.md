@@ -242,6 +242,7 @@ Below are the results from the CSS, html and accessibility checks.
 ##### Existing Bugs
 - The countdown timers do not properly synchronize with their associated checkboxes. The checkboxes should only be clickable once the timers have finished.
  As a result of the above, the decision was made to adjust the checkbox array to include checkboxes five, six and seven so that the sequential nature of the checkboxes made sense. 
+- You can unclick the checkboxes
 
 ##### Fixed Bugs
 - Timer bug #1 - Initially, I used setInterval to manage the countdown timers, but I observed that the displayed time occasionally advanced by several seconds. This discrepancy was due to the cumulative delay associated with setInterval. After researching the issue, I discovered that using setTimeout instead provided a more accurate countdown. setTimeout ensures that the next execution of the function only begins once the previous execution is fully complete, resulting in a more reliable and glitch-free countdown.
