@@ -15,149 +15,186 @@
     <script src="https://kit.fontawesome.com/2bb8c53756.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section>
+    <header>
         <h1 id="logo">BeerLine Buddy</h1>
         <h2 id="logo-description">A step-by-step tutorial on how to clean a cask beer line</h2>
-    </section>
+    </header>
     <br>
-    <section>
-        <div id="info-wrapper">
-            <div id="info-div">
-                <div class="info-div-box">
-                    <button id="previous-button" class="next-previous-buttons" aria-label="Click to go to the previous slide.">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
+    <main>
+        <section>
+            <div id="info-wrapper">
+                <div id="info-div">
+                    <div class="info-div-box">
+                        <button id="previous-button" class="next-previous-buttons" aria-label="Click to go to the previous slide.">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                    <div class="info-div-box">
+                        <p id="info-text"></p>
+                    </div>
+                    <div class="info-div-box">
+                        <button id="next-button" class="next-previous-buttons" aria-label="Click to go to the next slide.">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="info-div-box">
-                    <p id="info-text"></p>
-                </div>
-                <div class="info-div-box">
-                    <button id="next-button" class="next-previous-buttons" aria-label="Click to go to the next slide.">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                <div id="reset-div">
+                    <button id="reset-button" aria-label="Click to reset all options.">RESET</button>
                 </div>
             </div>
-            <div id="reset-div">
-                <button id="reset-button" aria-label="Click to reset all options.">RESET</button>
+        </section>
+        <section>
+            <div class="wrapper-top">
+                <div id="step-one-two-div" class="step-div">
+                    <div class="step-div-box">
+                        <div class="step-div-box-top">
+                            <h3>STEP 1</h3>
+                        </div>
+                        <div class="step-div-box-middle">
+                            <p>Fill two buckets with clean water. Pour 100ml of line cleaner into one of the buckets.</p>
+                        </div>
+                        <div class="step-div-box-bottom">
+                            <i id="checkbox-one" class="fa-regular fa-circle"></i>
+                        </div>
+                    </div>
+                    <div class="step-div-box">
+                        <div class="step-div-box-top">
+                            <h3>STEP 2</h3>
+                        </div>
+                        <div class="step-div-box-middle">
+                            <p>Secure the beer line into the base of the bucket of pure water and pull water through the line until until the water runs clear.</p>
+                        </div>
+                        <div class="step-div-box-bottom">
+                            <i id="checkbox-two" class="fa-regular fa-circle inactive-checkbox"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="step-three-four-div" class="step-div">
+                    <div class="step-div-box">
+                        <div class="step-div-box-top">
+                            <h3>STEP 3</h3>
+                        </div>
+                        <div class="step-div-box-middle">
+                            <p>Transfer the line into the bucket containing the line cleaner.</p></div>
+                        <div class="step-div-box-bottom">
+                            <i id="checkbox-three" class="fa-regular fa-circle inactive-checkbox"></i>
+                        </div>
+                    </div>
+                    <div class="step-div-box">
+                        <div class="step-div-box-top">
+                            <h3>STEP 4</h3>
+                        </div>
+                        <div class="step-div-box-middle">
+                            <p>Pull the line cleaner through the line and test the litmus paper to check the paper turns pink.</p>
+                        </div>
+                        <div class="step-div-box-bottom">
+                            <i id="checkbox-four" class="fa-regular fa-circle inactive-checkbox"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div id="timer-div" class="timer-div">
+                <div class="timer-div-box">
+                    <div class="timer-div-box-top">
+                        <h3>STEP 5</h3>
+                    </div>
+                    <div class="timer-div-box-middle">
+                        <h2 id="timer-one">Press start and wait 15 minutes.</h2>
+                        <button class="button" id="timer-button-one" aria-label="Click button to start timer one.">START</button>
+                    </div>
+                    <div class="step-div-box-bottom">
+                        <i id="checkbox-five" class="fa-regular fa-circle inactive-checkbox"></i>
+                    </div>
+                </div>
+                <div class="timer-div-box">
+                    <div class="timer-div-box-top">
+                        <h3>STEP 6</h3>
+                    </div>
+                    <div class="timer-div-box-middle">
+                        <h2 id="timer-two">Pull the line cleaner through then press start.</h2>
+                        <button class="button" id="timer-button-two" aria-label="Click button to start timer two.">START</button>
+                    </div>
+                    <div class="step-div-box-bottom">
+                        <i id="checkbox-six" class="fa-regular fa-circle inactive-checkbox"></i>
+                    </div>
+                </div>
+                <div class="timer-div-box">
+                    <div class="timer-div-box-top">
+                        <h3>STEP 7</h3>
+                    </div>
+                    <div class="timer-div-box-middle">
+                        <h2 id="timer-three">Pull the line cleaner through then press start.</h2>
+                        <button class="button" id="timer-button-three" aria-label="Click button to start timer three.">START</button>
+                    </div>
+                    <div class="step-div-box-bottom">
+                        <i id="checkbox-seven" class="fa-regular fa-circle inactive-checkbox"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper-bottom">
+                <div id="step-eight-nine-div" class="step-div">
+                    <div class="step-div-box">
+                        <div class="step-div-box-top">
+                            <h3>STEP 8</h3>
+                        </div>
+                        <div class="step-div-box-middle">
+                            <p>Remove the line from the bucket and place into a bucket of clean water.</p>
+                        </div>
+                        <div class="step-div-box-bottom">
+                            <i id="checkbox-eight" class="fa-regular fa-circle inactive-checkbox"></i>
+                        </div>
+                    </div>
+                    <div class="step-div-box">
+                        <div class="step-div-box-top">
+                            <h3>STEP 9</h3>
+                        </div>
+                        <div class="step-div-box-middle">
+                            <p>Pull the clean water through the line.</p>
+                        </div>
+                        <div class="step-div-box-bottom">
+                            <i id="checkbox-nine" class="fa-regular fa-circle inactive-checkbox"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="step-ten-eleven-div" class="step-div">
+                    <div class="step-div-box">
+                        <div class="step-div-box-top">
+                            <h3>STEP 10</h3>
+                        </div>
+                        <div class="step-div-box-middle">
+                            <p>Using litmus paper, pull the water through the line until a litmus paper test returns clear.</p>
+                        </div>
+                        <div class="step-div-box-bottom">
+                            <i id="checkbox-ten" class="fa-regular fa-circle inactive-checkbox"></i>
+                        </div>
+                    </div>
+                    <div class="step-div-box">
+                        <div class="step-div-box-top">
+                            <h3>STEP 11</h3>
+                        </div>
+                        <div class="step-div-box-middle">
+                            <p>Remove the beer line from the bucket</p>
+                        </div>
+                        <div class="step-div-box-bottom">
+                            <i id="checkbox-eleven" class="fa-regular fa-circle inactive-checkbox"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section>
+            <div id="hidden-div">
+                <p>The line is now clean.</p>
+            </div>
+        </section>
+        <br>
+    </main>
+    <footer id="footer">
+        <div class="footer-content">
+            <p>This site was created by Alex Bishop. For more information, visit <a href="https://www.indeed.com" target="_blank">Indeed</a>.</p>
         </div>
-    </section>
-    <section>
-        <div class="wrapper-top">
-            <div id="step-one-two-div" class="step-div">
-                <div class="step-div-box">
-                    <div class="step-div-box-top">STEP 1</div>
-                    <div class="step-div-box-middle">Fill two buckets with clean water. Pour 100ml of line cleaner into one of the buckets.</div>
-                    <div class="step-div-box-bottom">
-                        <i id="checkbox-one" class="fa-regular fa-circle"></i>
-                    </div>
-                </div>
-                <div class="step-div-box">
-                    <div class="step-div-box-top">STEP 2</div>
-                    <div class="step-div-box-middle">Secure the beer line into the base of the bucket of pure water and pull water through the line until until the water runs clear.</div>
-                    <div class="step-div-box-bottom">
-                        <i id="checkbox-two" class="fa-regular fa-circle inactive-checkbox"></i>
-                    </div>
-                </div>
-            </div>
-            <div id="step-three-four-div" class="step-div">
-                <div class="step-div-box">
-                    <div class="step-div-box-top">STEP 3</div>
-                    <div class="step-div-box-middle">Transfer the line into the bucket containing the line cleaner.</div>
-                    <div class="step-div-box-bottom">
-                        <i id="checkbox-three" class="fa-regular fa-circle inactive-checkbox"></i>
-                    </div>
-                </div>
-                <div class="step-div-box">
-                    <div class="step-div-box-top">STEP 4</div>
-                    <div class="step-div-box-middle">Pull the line cleaner through the line and test the litmus paper to check the paper turns pink.</div>
-                    <div class="step-div-box-bottom">
-                        <i id="checkbox-four" class="fa-regular fa-circle inactive-checkbox"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="timer-div" class="timer-div">
-            <div class="timer-div-box">
-                <div class="timer-div-box-top">STEP 5</div>
-                <div class="timer-div-box-middle">
-                    <h2 id="timer-one">Press start and wait 15 minutes.</h2>
-                    <button class="button" id="timer-button-one" aria-label="Click button to start timer one.">START</button>
-                </div>
-                <div class="step-div-box-bottom">
-                    <i id="checkbox-five" class="fa-regular fa-circle inactive-checkbox"></i>
-                </div>
-            </div>
-            <div class="timer-div-box">
-                <div class="timer-div-box-top">STEP 6</div>
-                <div class="timer-div-box-middle">
-                    <h2 id="timer-two">Pull the line cleaner through then press start.</h2>
-                    <button class="button" id="timer-button-two" aria-label="Click button to start timer two.">START</button>
-                </div>
-                <div class="step-div-box-bottom">
-                    <i id="checkbox-six" class="fa-regular fa-circle inactive-checkbox"></i>
-                </div>
-            </div>
-            <div class="timer-div-box">
-                <div class="timer-div-box-top">STEP 7</div>
-                <div class="timer-div-box-middle">
-                    <h2 id="timer-three">Pull the line cleaner through then press start.</h2>
-                    <button class="button" id="timer-button-three" aria-label="Click button to start timer three.">START</button>
-                </div>
-                <div class="step-div-box-bottom">
-                    <i id="checkbox-seven" class="fa-regular fa-circle inactive-checkbox"></i>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper-bottom">
-            <div id="step-eight-nine-div" class="step-div">
-                <div class="step-div-box">
-                    <div class="step-div-box-top">STEP 8</div>
-                    <div class="step-div-box-middle">Remove the line from the bucket and place into a bucket of clean water.</div>
-                    <div class="step-div-box-bottom">
-                        <i id="checkbox-eight" class="fa-regular fa-circle inactive-checkbox"></i>
-                    </div>
-                </div>
-                <div class="step-div-box">
-                    <div class="step-div-box-top">STEP 9</div>
-                    <div class="step-div-box-middle">Pull the clean water through the line.</div>
-                    <div class="step-div-box-bottom">
-                        <i id="checkbox-nine" class="fa-regular fa-circle inactive-checkbox"></i>
-                    </div>
-                </div>
-            </div>
-            <div id="step-ten-eleven-div" class="step-div">
-                <div class="step-div-box">
-                    <div class="step-div-box-top">STEP 10</div>
-                    <div class="step-div-box-middle">Using litmus paper, pull the water through the line until a litmus paper test returns clear.</div>
-                    <div class="step-div-box-bottom">
-                        <i id="checkbox-ten" class="fa-regular fa-circle inactive-checkbox"></i>
-                    </div>
-                </div>
-                <div class="step-div-box">
-                    <div class="step-div-box-top">STEP 11</div>
-                    <div class="step-div-box-middle">Remove the beer line from the bucket</div>
-                    <div class="step-div-box-bottom">
-                        <i id="checkbox-eleven" class="fa-regular fa-circle inactive-checkbox"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <br>
-    <section>
-        <div id="hidden-div">
-            <p>The line is now clean.</p>
-        </div>
-    </section>
-    <br>
-    <section>
-        <footer id="footer">
-            <div class="footer-content">
-                <p>This site was created by Alex Bishop. For more information, visit <a href="https://www.indeed.com" target="_blank">Indeed</a>.</p>
-            </div>
-        </footer>
-    </section>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
