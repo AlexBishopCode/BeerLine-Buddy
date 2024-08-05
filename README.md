@@ -242,16 +242,16 @@ Below are the results from the CSS, html and accessibility checks.
 ##### Existing Bugs
 - The countdown timers do not properly synchronize with their associated checkboxes. The checkboxes should only be clickable once the timers have finished.
  As a result of the above, the decision was made to adjust the checkbox array to include checkboxes five, six and seven so that the sequential nature of the checkboxes made sense. 
-- You can unclick the checkboxes
+- You can unclick the checkboxes 
 
 ##### Fixed Bugs
 - Timer bug #1 - Initially, I used setInterval to manage the countdown timers, but I observed that the displayed time occasionally advanced by several seconds. This discrepancy was due to the cumulative delay associated with setInterval. After researching the issue, I discovered that using setTimeout instead provided a more accurate countdown. setTimeout ensures that the next execution of the function only begins once the previous execution is fully complete, resulting in a more reliable and glitch-free countdown.
 
-- Timer bug #2
-- Timer bug #3
-- The fixed (sticky) navigation bar at the top of the page was covering sections of text when utilised so the associated sections of the site you were expecting to navigate to appeared muddled and unclear. This was fixed by adding a hidden div above each section the same height of the nav bar and linking each nav bar menu option to the appropriate hidden divs in order for the user to see the full content of the section they choose to view.
+- Timer bug #2 - The timers behave erratically when clicked multiple times, which is caused by overlapping timer functions. To fix this, I implemented a system to track active timers. This system maintains a list of running timers and checks if a timer is already active before starting a new one. Once a timer finishes, it is removed from the list, allowing a new timer to be started if needed.
 
-- The booking form loaded an error message once details had been entered saying the page visited was not secure. This was due to a typo in the target="" where https:// was written as http://.
+- - You can unclick the checkboxes, so I added logic to the event listener after it has been checked so that users cant interact with it again.
+
+- Timer bug #3
 
 - Accessibility performance initially failed in testing due to a lack of aria-labels on the reset, next, previous and start buttons. Aria labels were added to all buttons and the accessibility check provided a successful score of 100.
 

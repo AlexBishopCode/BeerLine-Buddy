@@ -54,7 +54,7 @@ resetButton.addEventListener('click', function() {
 // CHECKBOX CLICK TRANSFORM
 
 const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is creating an array of all of the available checkboces
-  'checkbox-four', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
+  'checkbox-four', 'checkbox-five', 'checkbox-six', 'checkbox-seven', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
   
   let currentCheckboxIndex = 0; // Track the currently clickable checkbox
 
@@ -67,26 +67,25 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is
     const checkbox = document.getElementById(current);
     const nextCheckbox = document.getElementById(next);
 
-    if (checkbox) {
+    if (checkbox && !checkbox.checked) {
       checkbox.classList.remove('fa-circle');
       checkbox.classList.add('fa-circle-check');
       checkbox.classList.add('checkbox-selected');
+      checkbox.checked = true; 
 
       let parentDiv = checkbox.parentElement; 
       while (parentDiv && !parentDiv.classList.contains('step-div-box-bottom')) {
           parentDiv = parentDiv.parentElement; 
       }
                 
-       if (parentDiv) {
-           parentDiv.classList.toggle('parent-div-color-change'); 
-       }
+      if (parentDiv) {
+          parentDiv.classList.toggle('parent-div-color-change'); 
+      }
+
+      if (nextCheckbox) {
+        nextCheckbox.classList.remove('inactive-checkbox');
+      }
     }
-    
-    // Highlight/move to the next checkbox
-    if (nextCheckbox) {
-      nextCheckbox.classList.remove('inactive-checkbox');
-    }
-    
   }
 
   // Add event listeners to the checkboxes
@@ -103,8 +102,18 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is
 
 //TIMERS
 
+const activeTimers = {}; // Track active timer const
+
 function startTimer(timerContainer, checkbox, timer = 900) {
   console.log('starting timer', timerContainer);
+
+  if (activeTimers[timerContainer]) {
+    console.log('Timer already active for', timerContainer);
+    return; // The return is used to prevent starting a new timer if one is already active
+  }
+
+  // This is the active timer
+  activeTimers[timerContainer] = true;
 
   const timeOut = 1000;
   const interval = () => {
