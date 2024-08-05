@@ -1,6 +1,6 @@
 # BeerLine Buddy
 
-ADD FRAMES 
+![Web page frames made on SMPRO application](assets/images/blb-frameexamples.png)
 
 BeerLine Buddy is a web page containing a step by step guide instructing users how to complete a successful line clean for a cask beer line.
 
@@ -175,18 +175,16 @@ Since users generally read from left to right, I placed the reset button to the 
 
 ## Feature Ideas
 
-- A interactive gallery/slide section with photos of content and people taking part in the walking tours.
-- Purchasing/cart options.
-- An interactive section displaying text from review websites.
-- A FAQ section to answer more of the users questions.
-- More options on the form to allow the user register and also log into the website if they have already registered.
+- The addition of instructional diagrams into each step to provide an even clearer tutorial.
+- The ability to input a beer line name into the web page so that the user knows which line they are using.
+- A log in feature where the only people who have access to the site are those provided with log in details (staff).
 
 ## Technologies Used
 
 ### Languages
 - Html - Used for page markup
 - CSS - Used for styling
-- Javascript - Used for DOM manipulation
+- Javascript - Used for interactivity and DOM manipulation
 
 ### Libraries
 - Google Fonts - Used for font style ('Poppins').
