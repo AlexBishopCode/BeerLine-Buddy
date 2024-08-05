@@ -262,11 +262,11 @@ footer {
 .footer-content p {
     margin: 0; 
     font-size: 16px;
-    color: #0073e6; 
+    color: black;
 }
 
 .footer-content a {
-    color: #0073e6; 
+    color: black;
     text-decoration: none; 
 }
 

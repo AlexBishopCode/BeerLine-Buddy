@@ -16,7 +16,7 @@ The objectives of this site are to provide the client with functional and dynami
 ### Visitor Goals
 
 
-The target audience for 60 Minute Soho includes:
+The target audience for BeerLine Buddy includes:
 
 - Existing members of staff who want a tool to make cleaning a beer line easier.
 - New members of staff with little knowledge of cleaning a beer line.
@@ -31,8 +31,8 @@ The design achieves these needs by:
 
 - Having a simple page and color-theme design making information clear and easy to read.
 - Having limited and concise text content to assist in keeping the attention of users.
-- Incorporating multiple sequential functions which guide the user through the various steps of the process.
 - Providing an interactive set of informative slides which can be navigated through to instruct the user how to use the step-by-step guide.
+- Incorporating multiple sequential functions which guide the user through the various steps of the process.
 - Having interactive checkboxes which not only act as part of the sequential path the user follows but also as a prompt reminding the user where they got to during a particular line clean.
 
 <hr>
@@ -43,7 +43,7 @@ The business goals include:
 
 - To ensure all staff (old and new) are able to fully clean a beer line and use the app when required to act as a prompt and informative guide.
 - To increase the sale of beer by minimising the time spent cleaning the lines.
-- To have a web page that is easy to access and is fully responsive to both tablets and mobile devices as both are utilised in this workplace.
+- To have a web page that is easy to access and is fully responsive on desktops, tablets and mobile devices as all are utilised in this workplace.
 
 <hr>
 
@@ -79,7 +79,7 @@ Fonts were imported into the code from [Google Fonts](https://fonts.google.com/)
 - The logo utilised the 'Poppins' Google font.
 As a Google Font, Poppins is optimized for web use, ensuring fast loading times and high-quality rendering. Poppins modern and professional appearance makes it an excellent choice this tutorial, where readability is crucial.
 
-- 'Open Sans' is utilised for all other text content on the page. Open Sans is widely used for its clarity and readability, making it a perfect choice for this informative web page.
+- The 'Open Sans' Google font is utilised for all other text content on the page. Open Sans is widely used for its clarity and readability, making it a perfect choice for this informative web page.
 
 <hr>
 
@@ -105,8 +105,6 @@ Emerald is a rich, vibrant shade of green that stands out well against most back
 - 'Melon' #F5A9A1
 Melon contrasts well with the softer colors of platinum, whitesmoke, and white, adding a touch of vibrancy while keeping a professional look. This makes the reset button both noticeable and easy to use.
 
-- The footer content uses 'Indeed Blue' #0073e6 to mirror the shade of blue associated with the Indeed link. This choice was made to create a cohesive design that reflects the branding of Indeed.
-
 <hr>
 
 ### Images
@@ -125,7 +123,7 @@ This webpage intentionally excludes images to maintain a focus on providing clea
 
 ![Logo screenshot on a desktop](assets/images/readme-images/blb-logoscreenshot:png.png)
 
-A simple, bold header along side an informative tag loine both in the Poppins font enhances the page design by providing clear, immediate emphasis and readability. 
+A simple, bold header along-side an informative tag line both in the Poppins font enhances the page design by providing clear, immediate emphasis and readability. 
 
 
 <hr>
@@ -137,23 +135,20 @@ A simple, bold header along side an informative tag loine both in the Poppins fo
 The information slides are displayed to provide the user with instructions on how to use the web page and the step/checkbox format. 
 The slides are managed by a JavaScript array which holds each slides content, each slide is indexed sequentially.
 The arrow buttons (previous and next) adjust the current slide index, enabling the display to change text as the code iterates through the array.
-Using the array to track slide numbers makes navigating between slides smooth and easy.
-
+Using the array to track slide numbers makes navigation between slides smooth and easy for the user.
 
 <hr>
 
 #### Reset Button
 
-![Rest button screenshot on a desktop](assets/images/readme-images/blb-resetscreenshot.png)
+![Reset button screenshot on a desktop](assets/images/readme-images/blb-resetscreenshot.png)
 
 The reset button stands out due to its distinct color, making it easily recognizable on the page. When clicked (with the use of a 'click' event listener), it refreshes the webpage, clearing all current entries and resetting the content. Additionally, the page scrolls back to the top, giving the appearance of a fresh start.
 
 This button is designed to simplify the process of resetting the page, it is especially useful for starting a new beer line cleaning process or quickly correcting any mistakes. It provides users with a straightforward way to restart and ensure everything is set up correctly.
 
-Since users generally read from left to right, I placed the reset button to the right of the info-div on larger screens. I wanted the info-div to be more noticeable when users first visit the desktop version of the webpage.
+Since users generally read from left to right, I placed the reset button to the right of the info-div on larger screens. I wanted the info-div to be more prominent than the reset button when users first visit the desktop version of the webpage so I placed the info-div on the left.
 
-
- 
 <hr>
 
 #### Step Dividers
@@ -162,11 +157,11 @@ Since users generally read from left to right, I placed the reset button to the 
 
 Each step divider contains a checkbox which can be marked as selected, and upon clicking the checkbox it then enables the next checkbox to be clickable, thus giving the steps of the tutorial a sequential flow which allows the user to easily understand the order in which the tasks are required to be carried out. 
 
-A functions named checkboxClick has been created which handles the checkbox clicks. When a checkbox is clicked, it checks the checkbox, marks it as selected, and activates the next checkbox on the list. 
+A function named checkboxClick has been created which handles the checkbox clicks. When a checkbox is clicked, it checks the checkbox, marks it as selected, and activates the next checkbox on the list. 
 
-The click listeners associated with the checkboxes ensure that when the function is called which handles the check/uncheck logic the stylings of the checkbox animate and the checkbox becomes visually 'checked'. 
+The click listeners associated with the checkboxes ensure that when the function is called the code handles the check/uncheck logic and the stylings of the checkbox animate and the checkbox becomes visually 'checked'. 
 
-When the last checkbox is reached and checked, a hidden div is shown and another the page scrolls to the bottom.
+When the last checkbox is reached and checked, a hidden div is shown and the page scrolls to the bottom ensuring that the user now knows the line is clean.
 
 <hr>
 
@@ -174,9 +169,11 @@ When the last checkbox is reached and checked, a hidden div is shown and another
 
 ![Timer steps on a desktop](assets/images/readme-images/blb-timerstepscreenshot.png)
 
-The timer dividers are integrated as part of the sequential flow of the step dividers. The timers also each contain a 15 minute countdown timer which allows for the line cleaner to settle within the beer line and thus assisting in the cleaning of the line. 
+The timer dividers are integrated as part of the sequential flow of the step dividers. The timer dividers each contain a 15 minute countdown timer which allows for the line cleaner to settle within the beer line and thus assists in the cleaning of the line. 
 
-The timers have been programme to start by using click event listeners. The timers countdown from a set time, updating the display each second using an interval function and countdown logic.
+The timers have been programmed to start by adding click event listeners to their associated start buttons. The timers count down from a set time, updating the display each second using an interval function and countdown logic.
+
+Manipulation of the (900) seconds was required to ensure the minutes and seconds are displayed correctly and recognisably on the web page during the countdown timer. The minutes and seconds were converted into strings and the strings were programmed (using the padStart method) so that a '0' will appear before any single digit numbers to make the timer appear more clean and professional.
 
 <hr>
 
@@ -196,18 +193,18 @@ The footer at the bottom of the page credits myself as the creator of the site. 
 ## Feature Ideas
 
 - The addition of instructional diagrams into each step to provide an even clearer tutorial.
-- The ability to input a beer line name into the web page so that the user knows which line they are using.
-- A log in feature where the only people who have access to the site are those provided with log in details (staff).
+- The ability for the user to type and input and set a beer line 'name' into the web page so that the user knows which line they are using.
+- A log-in feature where the only people who have access to the site are those provided with log in details (staff).
 
 ## Technologies Used
 
 ### Languages
 - Html - Used for page markup
 - CSS - Used for styling
-- Javascript - Used for interactivity and DOM manipulation
+- JavaScript - Used for interactivity and DOM manipulation
 
 ### Libraries
-- Google Fonts - Used for font style ('Poppins').
+- Google Fonts - Used for font style 'Poppins' and 'Open Sans'.
 - Font Awesome - Used for retreiving the 'next' and 'previous' button arrows and the checkbox icons.
 
 ### Platforms
@@ -217,14 +214,13 @@ The footer at the bottom of the page credits myself as the creator of the site. 
 ### Other Tools Utilised
 - Coolers - For color selection and color swatch.
 - SMPRO - App utilised for framing web page screengrabs with iphone/ipad/macbook.
-- 
 
 ### TESTING
 
 #### METHODS
 
 ##### Validation Process
-- The HTML and CSS files have been validated with W3C HTML/CSS Validator, with no errors or warnings to show for the CSS, however two warnings were raised for the html. These issues remain but are deemed insignificant. 
+- The HTML and CSS files have been validated with W3C HTML/CSS Validator, with no errors or warnings to show for the CSS, however two warnings were raised for the html - These issues remain but are not deemed significant.
 - The site has been tested against the google devtools lighthouse service to ensure accessibility is at 100%.
 - The JavaScript code has been tested on the JHint service with no errors raised.
 - The web page has been manually tested for screen reader compatibility using the Google Chrome screen reader extension with no aparent defects noted. 
