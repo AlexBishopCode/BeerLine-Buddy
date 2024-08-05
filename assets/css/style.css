@@ -1,6 +1,7 @@
-/* // Import Google Font */
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* General Page Styles */
 * {
     font-family: 'Poppins', sans-serif;
     color: black;
@@ -11,8 +12,7 @@ body {
     background-color: #F2F2F2;
 }
 
-/* LOGO SECTION */
-
+/* Header Section */
 #logo {
     text-align: center;
     font-size: xx-large;
@@ -27,13 +27,10 @@ body {
     font-size: large;
     font-weight: normal;
     font-style: oblique;
-    /* background-color: #D8E0D9; */
-    /* padding: 10px; */
     border-radius: 0 0 10px 10px;
 }
 
-/* INFO DIV */
-
+/* Info Div */
 #info-wrapper {
     display: flex;
     flex-direction: column;
@@ -41,7 +38,6 @@ body {
 
 #info-div {
     display: flex;
-    /* height: 100px; */
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -54,9 +50,7 @@ body {
     padding: 10px;
     height: 100px;
     max-width: 100%;
-    /* border: 1px solid red; */
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -64,7 +58,6 @@ body {
 
 #info-text {
     font-size: x-small;
-    /* border: 1px solid black; */
     height: 100%;
     min-width: 100%;
     align-content: center;
@@ -73,13 +66,7 @@ body {
     font-style: oblique;
 }
 
-.wrapper-top, .wrapper-bottom {
-    display: flex;
-    flex-direction: column;
-}
-
-/* RESET BUTTON */
-
+/* Reset Button */
 #reset-div {
     padding: 10px;
     height: 40px;
@@ -88,159 +75,6 @@ body {
     justify-content: center;
     text-align: center;
     vertical-align: middle;
-}
-
-/* STEP DIVS */
-
-.step-div { 
-    display: flex;
-    flex-direction: row;
-}
-
-.step-div-box {
-    flex: 1;
-    padding: 10px;
-    /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.step-div-box-top {
-    padding: 10px;
-    /* border: 1px solid purple; */
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    background-color: #D8E0D9;
-    border-radius: 0 20px 0 0;
-    font-weight: bold;
-}
-
-.step-div-box-middle {
-    padding: 10px;
-    /* border: 1px solid orange; */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100px;
-    vertical-align: middle;
-    display: flex;
-    background-color: white;
-    font-size: x-small;
-}
-
-.step-div-box-bottom {
-    padding: 10px;
-    max-height: 48px;
-    /* border: 1px solid green; */
-    background-color: white;
-    border-radius: 0 0 0 20px;
-    align-items: center;
-    justify-content: center;
-    text-align: right;
-}
-
-/* TIMER DIVS */
-
-.timer-div {
-    display: flex;
-    flex-direction: row;
-}
-
-.timer-div-box {
-    flex: 1;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.timer-div-box-top {
-    padding: 10px;
-    /* border: 1px solid purple; */
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    border-radius: 0 20px 0 0;
-    background-color: #D8E0D9;
-    font-weight: bold;
-}
-
-.timer-div-box-middle {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    background-color: white;
-    /* border: 1px solid orange; */
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: x-small;
-}
-
-/* .timer-div-box-bottom {
-    padding: 10px;
-    border: 1px solid green;
-    /* border-radius: 0 0 0 20px; */
-
-/* CHECKBOX STYLINGS */
-
-.fa-circle {
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.fa-circle:hover {
-    background-color: #e0e0e0; /* Slightly darker gray */
-    font-size: 22px;
-    transform: scale(1.15); /* Gradual increase in size */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Circular shadow effect */
-    color: green;
-}
-.checkbox-selected {
-    color: #FFFFFF;
-    font-size: 22px;
-}
-
-.inactive-checkbox {
-    pointer-events: none;
-    color: gray;
-}
-
-/* HIDDEN DIV */
-
-#hidden-div {
-    display: none;
-    border-radius: 20px;
-    background-color: #50C878;
-    text-align: center;
-    margin: auto;
-    padding: 20px;
-    width: 80%;
-}
-
-/* FONT SIZES */
-
-h2 {
-    font-size: x-small;
-}
-
-.next-previous-buttons {
-    font-size: x-small;
-    height: 100%;
-    width: 100%;
-    border: none;
-    background-color: white;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: xx-large;
-    cursor: pointer;
-}
-
-.next-previous-buttons:hover {
-    background-color: #E0D2B1; 
-    transition: background-color 0.3s ease; 
 }
 
 #reset-button {
@@ -259,6 +93,135 @@ h2 {
     transition: background-color 0.3s ease; 
 }
 
+/* Step Divs */
+.step-div { 
+    display: flex;
+    flex-direction: row;
+}
+
+.step-div-box {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-div-box-top {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    background-color: #D8E0D9;
+    border-radius: 0 20px 0 0;
+    font-weight: bold;
+}
+
+.step-div-box-middle {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+    vertical-align: middle;
+    display: flex;
+    background-color: white;
+    font-size: x-small;
+}
+
+.step-div-box-bottom {
+    padding: 10px;
+    max-height: 48px;
+    background-color: white;
+    border-radius: 0 0 0 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+
+/* Timer Divs */
+.timer-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.timer-div-box {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-div-box-top {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    border-radius: 0 20px 0 0;
+    background-color: #D8E0D9;
+    font-weight: bold;
+}
+
+.timer-div-box-middle {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: white;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: x-small;
+}
+
+/* Checkbox Stylings */
+.fa-circle {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-circle:hover {
+    cursor: pointer;
+}
+
+.checkbox-selected {
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.inactive-checkbox {
+    pointer-events: none;
+    color: gray;
+}
+
+/* Hidden Div */
+#hidden-div {
+    display: none;
+    border-radius: 20px;
+    background-color: #50C878;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+/* Button Styles */
+.next-previous-buttons {
+    font-size: x-small;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.next-previous-buttons:hover {
+    background-color: #E0D2B1; 
+    transition: background-color 0.3s ease; 
+}
+
 .button {
     font-size: x-small;
     height: 50px;
@@ -267,15 +230,13 @@ h2 {
     transition: background-color 0.3s ease; 
 }
 
-/* div color change */
-
+/* Div Color Change */
 .parent-div-color-change {
     background-color: #50C878;
-    transition: background-color 0.5s ease; /* Smooth transition */
+    transition: background-color 0.5s ease;
 }
 
-/* footer divider */
-
+/* Footer Styles */
 #footer {
     background-color: #f1f1f1; 
     padding: 20px; 
@@ -305,8 +266,7 @@ h2 {
     text-decoration: underline;
 }
 
-/* MEDIA QUERY FOR LARGER SCREENS  */
-
+/* Media Query for Larger Screens (min-width: 768px) */
 @media (min-width: 768px) {
 
     #info-wrapper {
