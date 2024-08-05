@@ -90,9 +90,8 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is
     }
   }
 
-  // Add event listeners to the checkboxes
   checkboxes.forEach((checkbox, index) => {
-    document.getElementById(checkbox).addEventListener('click', () => {
+    document.getElementById(checkbox).addEventListener('click', () => {   // Add event listeners to the checkboxes
       checkboxClick(checkbox, checkboxes[index + 1]);
         if (index + 1 === checkboxes.length) {
           hiddenDiv.style.display = 'block';
@@ -106,6 +105,9 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is
 
 const activeTimers = {}; // Track active timer const
 
+ /** 
+  * Function to start the timer at 900 seconds (15 minutes)
+  */
 function startTimer(timerContainer, timer = 900) {
   console.log('starting timer', timerContainer);
 
@@ -139,6 +141,10 @@ function startTimer(timerContainer, timer = 900) {
 setTimeout(interval, timeOut);
 
 }
+
+ /** 
+  * Event listener for the timer buttons
+  */
 const buttons = ['timer-button-one', 'timer-button-two', 'timer-button-three']; 
 const buttonText = ['timer-one', 'timer-two', 'timer-three']; 
 buttons.forEach((button, index) => {

@@ -76,8 +76,10 @@ Click here to view wireframes: https://drive.google.com/file/d/1bzuUj2UIKF1NtDKk
 
 Fonts were imported into the code from [Google Fonts](https://fonts.google.com/).
 
-- All font on the page uses the 'Poppins' Google font.
-As a Google Font, Poppins is optimized for web use, ensuring fast loading times and high-quality rendering on all devices. Poppins modern and professional appearance makes it an excellent choice for tutorials, where readability is crucial.
+- The logo utilised the 'Poppins' Google font.
+As a Google Font, Poppins is optimized for web use, ensuring fast loading times and high-quality rendering. Poppins modern and professional appearance makes it an excellent choice this tutorial, where readability is crucial.
+
+- 'Open Sans' is utilised for all other text content on the page. Open Sans is widely used for its clarity and readability, making it a perfect choice for this informative web page.
 
 <hr>
 
