@@ -1,6 +1,6 @@
 # BeerLine Buddy
 
-![Web page frames made on SMPRO application](assets/images/blb-frameexamples.png)
+![Web page frames made on SMPRO application](assets/images/readme-images/blb-frameexamples.png)
 
 BeerLine Buddy is a web page containing a step by step guide instructing users how to complete a successful line clean for a cask beer line.
 
@@ -68,7 +68,7 @@ The business goals include:
 
 Wireframes were drawn on [balsamic](https://balsamiq.com) to draw a general layout of the proposed web page.
 
-Click here to view wireframes: https://drive.google.com/drive/folders/1sStum-9PVeh2ybLao4RfvSAAKJ0clWOX?usp=sharing
+Click here to view wireframes: https://drive.google.com/file/d/1bzuUj2UIKF1NtDKklYr7TjZ9UcAVwtdT/view?usp=sharing
 
 <hr>
 
@@ -92,7 +92,7 @@ As a Google Font, Poppins is optimized for web use, ensuring fast loading times 
 
 With the user and business goals in mind, it is important for this site to have a minimalist color palette. The color palette needs to appear professional and needs to constrast where appropriate to make the content clear and easy-to-read.
 
-![Image of the site color palette](assets/images/blb-colorswatch.png)
+![Image of the site color palette](assets/images/readme-images/blb-colorswatch.png)
 
 - 'White smoke' #F5F5F5, 'White' #FFFFFF, 'Platinum' #D8E0DA
 The combination of platinum, white smoke, and white forms a sophisticated and stylish color scheme. Their subtle contrasts and modern appeal provide a clean, elegant appearance while ensuring visual clarity and harmony. The combination of whitesmoke and platinum evokes the imagery of beer kegs and casks in a cellar, aligning perfectly with the website's theme.
@@ -102,6 +102,8 @@ Emerald is a rich, vibrant shade of green that stands out well against most back
 
 - 'Melon' #F5A9A1
 Melon contrasts well with the softer colors of platinum, whitesmoke, and white, adding a touch of vibrancy while keeping a professional look. This makes the reset button both noticeable and easy to use.
+
+- The footer content uses 'Indeed Blue' #0073e6 to mirror the shade of blue associated with the Indeed link. This choice was made to create a cohesive design that reflects the branding of Indeed.
 
 <hr>
 
@@ -119,7 +121,7 @@ This webpage intentionally excludes images to maintain a focus on providing clea
 
 ##### Logo / Header
 
-![Logo screenshot on a desktop](assets/images/blb-logoscreenshot:png.png)
+![Logo screenshot on a desktop](assets/images/readme-images/blb-logoscreenshot:png.png)
 
 A simple, bold header along side an informative tag loine both in the Poppins font enhances the page design by providing clear, immediate emphasis and readability. 
 
@@ -128,7 +130,7 @@ A simple, bold header along side an informative tag loine both in the Poppins fo
 
 ##### Information Slides
 
-![information Slides Screenshot on a desktop](assets/images/blb-infoslidesscreenshot.png)
+![information Slides Screenshot on a desktop](assets/images/readme-images/blb-infoslidesscreenshot.png)
 
 The information slides are displayed to provide the user with instructions on how to use the web page and the step/checkbox format. 
 The slides are managed by a JavaScript array which holds each slides content, each slide is indexed sequentially.
@@ -140,7 +142,7 @@ Using the array to track slide numbers makes navigating between slides smooth an
 
 #### Reset Button
 
-![Rest button screenshot on a desktop](assets/images/blb-resetscreenshot.png)
+![Rest button screenshot on a desktop](assets/images/readme-images/blb-resetscreenshot.png)
 
 The reset button stands out due to its distinct color, making it easily recognizable on the page. When clicked (with the use of a 'click' event listener), it refreshes the webpage, clearing all current entries and resetting the content. Additionally, the page scrolls back to the top, giving the appearance of a fresh start.
 
@@ -154,7 +156,7 @@ Since users generally read from left to right, I placed the reset button to the 
 
 #### Step Dividers
 
-![Step dividers screenshot on a desktop](assets/images/blb-stepscreenshot.png)
+![Step dividers screenshot on a desktop](assets/images/readme-images/blb-stepscreenshot.png)
 
 Each step divider contains a checkbox which can be marked as selected, and upon clicking the checkbox it then enables the next checkbox to be clickable, thus giving the steps of the tutorial a sequential flow which allows the user to easily understand the order in which the tasks are required to be carried out. 
 
@@ -168,7 +170,7 @@ When the last checkbox is reached and checked, a hidden div is shown and another
 
 #### Timer dividers
 
-![Timer steps on a desktop](assets/images/blb-timerstepscreenshot.png)
+![Timer steps on a desktop](assets/images/readme-images/blb-timerstepscreenshot.png)
 
 The timer dividers are integrated as part of the sequential flow of the step dividers. The timers also each contain a 15 minute countdown timer which allows for the line cleaner to settle within the beer line and thus assisting in the cleaning of the line. 
 
@@ -178,14 +180,14 @@ The timers have been programme to start by using click event listeners. The time
 
 #### Hidden Divider
 
-![Hidden Div screenshot on a desktop](assets/images/blb-hiddendivscreenshot.png)
+![Hidden Div screenshot on a desktop](assets/images/readme-images/blb-hiddendivscreenshot.png)
 
 The hidden div is initially set to be invisible. It only appears once all the checkboxes have been checked, indicating that every step of the process has been completed. Additionally, the page automatically scrolls to the bottom to ensure the user sees the newly visible div. This div then displays a message informing the user that they have successfully completed the line cleaning process.
 
 
 #### Footer
 
-![Footer screenshot on a desktop](assets/images/blb-footerscreenshot.png)
+![Footer screenshot on a desktop](assets/images/readme-images/blb-footerscreenshot.png)
 
 The footer at the bottom of the page credits myself as the creator of the site. It also includes a link to Indeed which opens in a new tab, providing users with more information or resources related to the site.
 
@@ -234,16 +236,27 @@ The footer at the bottom of the page credits myself as the creator of the site. 
 
 Below are the results from the CSS, html and accessibility checks.
 
-![CSS validator result screenshot on desktop](assets/documents/readme-images/readme-css-check.png)
+CSS VALIDATOR RESULT:
+![CSS validator result screenshot on desktop](assets/images/readme-images/blb-cssvalidatorcheck.png)
 
-![HTML validator result screenshot on desktop](assets/documents/readme-images/readme-html-val.png)
+HTML VALIDATOR RESULT:
 
-![Lighthouse validator result screenshot on desktop](assets/documents/readme-images/readme-lighthouse-val.png)
+> Two warnings exist.
+
+![HTML validator result screenshot on desktop](assets/images/readme-images/blb-htmlvalidatorcheck.png)
+
+JAVASCRIPT VALIDATOR RESULT:
+
+![Javascript validator result screenshot on desktop](assets/images/readme-images/blb-javascriptvalidator.png)
+
+ACCESSIBILITY VALIDATOR RESULT:
+
+![Lighthouse validator result screenshot on desktop](assets/images/readme-images/blb-lighthouseperformance.png)
 
 
 ##### MOBILE TESTING
 - The site was frequently tested on my personal iphone with iOS as well as sent to friends/family with samsungs and older models of iphones to ask for feedback.
-- Testing involved going through the entire sign up process, utilising the navigation bar, and checking all website functions.
+- Testing involved going through the entire sequential step checkbox process, utilising the previous and next buttons to navigate the instructional slides, utilising the reset button and activating all timers. 
 - Chrome was utilised to inspect the site in mobile and tablet format, navigating the pages and testing the functions within Chromes 'development tools' service.
 
 ##### Desktop Testing
@@ -256,18 +269,16 @@ Below are the results from the CSS, html and accessibility checks.
 ##### Existing Bugs
 - The countdown timers do not properly synchronize with their associated checkboxes. The checkboxes should only be clickable once the timers have finished.
  As a result of the above, the decision was made to adjust the checkbox array to include checkboxes five, six and seven so that the sequential nature of the checkboxes made sense. 
-- You can unclick the checkboxes 
 
 ##### Fixed Bugs
 - Timer bug #1 - Initially, I used setInterval to manage the countdown timers, but I observed that the displayed time occasionally advanced by several seconds. This discrepancy was due to the cumulative delay associated with setInterval. After researching the issue, I discovered that using setTimeout instead provided a more accurate countdown. setTimeout ensures that the next execution of the function only begins once the previous execution is fully complete, resulting in a more reliable and glitch-free countdown.
 
 - Timer bug #2 - The timers behave erratically when clicked multiple times, which is caused by overlapping timer functions. To fix this, I implemented a system to track active timers. This system maintains a list of running timers and checks if a timer is already active before starting a new one. Once a timer finishes, it is removed from the list, allowing a new timer to be started if needed.
 
-- - You can unclick the checkboxes, so I added logic to the event listener after it has been checked so that users cant interact with it again.
-
-- Timer bug #3
+- You were previous able to uncheck the checkboxes after you had checked them, so I added logic to the event listener after it has been checked so that users cant interact with it again.
 
 - Accessibility performance initially failed in testing due to a lack of aria-labels on the reset, next, previous and start buttons. Aria labels were added to all buttons and the accessibility check provided a successful score of 100.
+
 
 ##### DEPLOYMENT
 
@@ -283,10 +294,14 @@ The live link to the site can be accessed here: https://alexbishopcode.github.io
 
 ##### Content
 
-All text on the web page was written by myself from scratch with prior knowledge of the topic.
+All text on the web page was written by myself from scratch from my prior knowledge of the topic.
+
+The javascript educational content from Mosh's "Ultimate JavaScript Part 1: Fundamentals" were extensively utilised throughout this course. Whilst any uncited JavaScript code used in this project is original, Mosh's course served as a significant source of inspiration and provided valuable insights into various topics. For more information, you can visit [Mosh's course. ](https://members.codewithmosh.com/)
+
+AI powered generator 'ChatGPT' was utilised whilst creating the timer - specifically to help
+construct the mintues and seconds as this was a totally new concept to me - https://chatgpt.com/
 
 The Love Maths Project on the [Code Institute](https://www.codeinstitute.net) Full Stack Web Development Course was used as a loose template to create some of the general framework of the site. 
-Most notably the code from the Love Running project was utilised to create the foundation of the navigation bar, the sign up form and the social media links before developing and adapting these to be coherant with my web page design and distinguished functions for this project.
 
 The Sample Project README.md section of the Full Stack Web Development course on [Code Institute](https://www.codeinstitute.net) was used as a guide to understand the content required to be present within a README.md file.
 
@@ -295,4 +310,3 @@ The 'Horizon Photography'(https://github.com/Ri-Dearg/horizon-photo/blob/main/RE
 ##### Contact
 
 Please feel free to contact me on helloalexbishop@gmail.com
-

@@ -1,5 +1,6 @@
 
 // INSTRUCTIONAL STEPS
+
 // Source Details - code heavily adapted but inspired by Javascript Image slider tutorial by @smartcode9021 on YouTube.
 
 const slides = [ // Array of slides for the info-div
@@ -42,6 +43,7 @@ updateSlide();
 
 
 // RESET BUTTON
+
 // source link for inspiration = https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
 
 const resetButton = document.getElementById("reset-button");
@@ -56,7 +58,7 @@ resetButton.addEventListener('click', function() {
 const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is creating an array of all of the available checkboces
   'checkbox-four', 'checkbox-five', 'checkbox-six', 'checkbox-seven', 'checkbox-eight', 'checkbox-nine', 'checkbox-ten', 'checkbox-eleven'];
   
-  let currentCheckboxIndex = 0; // Track the currently clickable checkbox
+  // let currentCheckboxIndex = 0; // Track the currently clickable checkbox
 
   let hiddenDiv = document.getElementById('hidden-div');
   
@@ -125,7 +127,7 @@ function startTimer(timerContainer, checkbox, timer = 900) {
     const constructMinutes = mm.toString().padStart(2, '0');
     const constructSeconds = ss.toString().padStart(2, '0');
 
-    document.getElementById(timerContainer).innerText = `${constructMinutes}:${constructSeconds}`;
+    document.getElementById(timerContainer).innerText = `${constructMinutes}:${constructSeconds}`; // AI powered generator 'ChatGPT' was utilised to inform me on how to construct minutes and seconds.
     if (timer < 1) {
         document.getElementById(timerContainer).innerText = "Move to the next step.";
         checkboxClick(null, checkbox);
