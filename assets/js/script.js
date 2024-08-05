@@ -106,7 +106,7 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is
 
 const activeTimers = {}; // Track active timer const
 
-function startTimer(timerContainer, checkbox, timer = 900) {
+function startTimer(timerContainer, timer = 10) {
   console.log('starting timer', timerContainer);
 
   if (activeTimers[timerContainer]) {
@@ -119,19 +119,17 @@ function startTimer(timerContainer, checkbox, timer = 900) {
 
   const timeOut = 1000;
   const interval = () => {
-    timer--;
+    timer--; // Used to decremenet the timer
 
     const mm = Math.floor(timer / 60);
     const ss = timer % 60;
     
-    const constructMinutes = mm.toString().padStart(2, '0');
-    const constructSeconds = ss.toString().padStart(2, '0');
+    const constructMinutes = mm.toString().padStart(2, '0'); // Ensuring a 0 is positioned infront of singular digits.
+    const constructSeconds = ss.toString().padStart(2, '0'); // Ensuring a 0 is positioned infront of singular digits.
 
     document.getElementById(timerContainer).innerText = `${constructMinutes}:${constructSeconds}`; // AI powered generator 'ChatGPT' was utilised to inform me on how to construct minutes and seconds.
     if (timer < 1) {
         document.getElementById(timerContainer).innerText = "Move to the next step.";
-        checkboxClick(null, checkbox);
-        document.getElementById(checkbox).addEventListener('click', () => checkboxClick(checkbox));
     }
     else {
       setTimeout(interval, timeOut);
@@ -143,9 +141,8 @@ setTimeout(interval, timeOut);
 }
 const buttons = ['timer-button-one', 'timer-button-two', 'timer-button-three']; 
 const buttonText = ['timer-one', 'timer-two', 'timer-three']; 
-const timedCheckboxes = ['checkbox-five', 'checkbox-six', 'checkbox-seven']; 
 buttons.forEach((button, index) => {
 
-  document.getElementById(button).addEventListener('click', () => startTimer(buttonText[index], timedCheckboxes[index], 900));
+  document.getElementById(button).addEventListener('click', () => startTimer(buttonText[index]));
 
 });

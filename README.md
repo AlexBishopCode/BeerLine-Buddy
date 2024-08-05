@@ -222,9 +222,10 @@ The footer at the bottom of the page credits myself as the creator of the site. 
 #### METHODS
 
 ##### Validation Process
-- The HTML and CSS files have been validated with W3C HTML/CSS Validator, with no errors or warnings to show.
+- The HTML and CSS files have been validated with W3C HTML/CSS Validator, with no errors or warnings to show for the CSS, however two warnings were raised for the html. These issues remain but are deemed insignificant. 
 - The site has been tested against the google devtools lighthouse service to ensure accessibility is at 100%.
-<!-- - The web page has been manually tested for screen reader compatibility using the Google Chrome screen reader extension with no aparent defects noted. -->
+- The JavaScript code has been tested on the JHint service with no errors raised.
+- The web page has been manually tested for screen reader compatibility using the Google Chrome screen reader extension with no aparent defects noted. 
 
 ##### GENERAL TESTING
 
@@ -237,11 +238,12 @@ The footer at the bottom of the page credits myself as the creator of the site. 
 Below are the results from the CSS, html and accessibility checks.
 
 CSS VALIDATOR RESULT:
+
 ![CSS validator result screenshot on desktop](assets/images/readme-images/blb-cssvalidatorcheck.png)
 
 HTML VALIDATOR RESULT:
 
-> Two warnings exist.
+> Two minor warnings exist.
 
 ![HTML validator result screenshot on desktop](assets/images/readme-images/blb-htmlvalidatorcheck.png)
 
@@ -249,7 +251,7 @@ JAVASCRIPT VALIDATOR RESULT:
 
 ![Javascript validator result screenshot on desktop](assets/images/readme-images/blb-javascriptvalidator.png)
 
-ACCESSIBILITY VALIDATOR RESULT:
+PERFORMANCE AND ACCESSIBILITY VALIDATOR RESULT:
 
 ![Lighthouse validator result screenshot on desktop](assets/images/readme-images/blb-lighthouseperformance.png)
 
@@ -268,14 +270,14 @@ ACCESSIBILITY VALIDATOR RESULT:
 
 ##### Existing Bugs
 - The countdown timers do not properly synchronize with their associated checkboxes. The checkboxes should only be clickable once the timers have finished.
- As a result of the above, the decision was made to adjust the checkbox array to include checkboxes five, six and seven so that the sequential nature of the checkboxes made sense. 
+ > As a result of the above, the decision was made to adjust the checkbox array to include checkboxes five, six and seven so that the sequential nature of the checkboxes made sense. The timers for now do not make their associated checkboxes clickable upon completion of the timer.
 
 ##### Fixed Bugs
 - Timer bug #1 - Initially, I used setInterval to manage the countdown timers, but I observed that the displayed time occasionally advanced by several seconds. This discrepancy was due to the cumulative delay associated with setInterval. After researching the issue, I discovered that using setTimeout instead provided a more accurate countdown. setTimeout ensures that the next execution of the function only begins once the previous execution is fully complete, resulting in a more reliable and glitch-free countdown.
 
 - Timer bug #2 - The timers behave erratically when clicked multiple times, which is caused by overlapping timer functions. To fix this, I implemented a system to track active timers. This system maintains a list of running timers and checks if a timer is already active before starting a new one. Once a timer finishes, it is removed from the list, allowing a new timer to be started if needed.
 
-- You were previous able to uncheck the checkboxes after you had checked them, so I added logic to the event listener after it has been checked so that users cant interact with it again.
+- You were previously able to uncheck the checkboxes after you had checked them, so I added logic to the event listener after it has been checked so that users cant interact with it again.
 
 - Accessibility performance initially failed in testing due to a lack of aria-labels on the reset, next, previous and start buttons. Aria labels were added to all buttons and the accessibility check provided a successful score of 100.
 
@@ -294,14 +296,20 @@ The live link to the site can be accessed here: https://alexbishopcode.github.io
 
 ##### Content
 
-All text on the web page was written by myself from scratch from my prior knowledge of the topic.
+All text content on the web page was written by myself from scratch from my prior knowledge of the topic.
 
-The javascript educational content from Mosh's "Ultimate JavaScript Part 1: Fundamentals" were extensively utilised throughout this course. Whilst any uncited JavaScript code used in this project is original, Mosh's course served as a significant source of inspiration and provided valuable insights into various topics. For more information, you can visit [Mosh's course. ](https://members.codewithmosh.com/)
+The javascript educational content from Mosh's "Ultimate JavaScript Part 1: Fundamentals" was extensively utilised throughout this project. Whilst any uncited JavaScript code used in this project is original, Mosh's course served as a significant source of inspiration and provided valuable insights into various topics. For more information, you can visit [Mosh's course. ](https://members.codewithmosh.com/)
 
-AI powered generator 'ChatGPT' was utilised whilst creating the timer - specifically to help
-construct the mintues and seconds as this was a totally new concept to me - https://chatgpt.com/
+The infocmative slide section code heavily adapted but inspired by Javascript Image slider tutorial by @smartcode9021 on YouTube.
+
+The reload https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+
+AI powered generator 'ChatGPT' was utilised whilst creating the timer - specifically whilst
+constructing the mintues and seconds as this was a totally new concept to me and one which I found difficult to source via online tutorials - https://chatgpt.com/
 
 The Love Maths Project on the [Code Institute](https://www.codeinstitute.net) Full Stack Web Development Course was used as a loose template to create some of the general framework of the site. 
+
+The following page on https://css-tricks.com was used to assist with transition CSS Stylings - https://css-tricks.com/almanac/properties/t/transition/
 
 The Sample Project README.md section of the Full Stack Web Development course on [Code Institute](https://www.codeinstitute.net) was used as a guide to understand the content required to be present within a README.md file.
 
