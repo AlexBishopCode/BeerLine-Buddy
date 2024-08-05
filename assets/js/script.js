@@ -146,6 +146,6 @@ const buttonText = ['timer-one', 'timer-two', 'timer-three'];
 const timedCheckboxes = ['checkbox-five', 'checkbox-six', 'checkbox-seven']; 
 buttons.forEach((button, index) => {
 
-  document.getElementById(button).addEventListener('click', () => startTimer(buttonText[index], timedCheckboxes[index], 10));
+  document.getElementById(button).addEventListener('click', () => startTimer(buttonText[index], timedCheckboxes[index], 900));
 
 });
