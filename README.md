@@ -107,7 +107,7 @@ Melon contrasts well with the softer colors of platinum, whitesmoke, and white, 
 
 ### Images
 
-This webpage intentionally excludes images to maintain a focus on providing clear and straightforward information. The design prioritizes simplicity and functionality. However, instructional images may be added in the future to visually enhance each step and improve understanding.
+This webpage intentionally excludes images to maintain a focus on providing clear and straightforward information. The design prioritizes simplicity and functionality. However, instructional images/diagrams may be added in the future to visually enhance each step and improve understanding.
 
 ### FEATURES
 
@@ -119,9 +119,10 @@ This webpage intentionally excludes images to maintain a focus on providing clea
 
 ##### Logo / Header
 
+![Logo screenshot on a desktop](assets/images/blb-logoscreenshot:png.png)
+
 A simple, bold header along side an informative tag loine both in the Poppins font enhances the page design by providing clear, immediate emphasis and readability. 
 
-![Logo screenshot on a desktop](assets/images/blb-logoscreenshot:png.png)
 
 <hr>
 
@@ -155,7 +156,13 @@ Since users generally read from left to right, I placed the reset button to the 
 
 ![Step dividers screenshot on a desktop](assets/images/blb-stepscreenshot.png)
 
+Each step divider contains a checkbox which can be marked as selected, and upon clicking the checkbox it then enables the next checkbox to be clickable, thus giving the steps of the tutorial a sequential flow which allows the user to easily understand the order in which the tasks are required to be carried out. 
 
+A functions named checkboxClick has been created which handles the checkbox clicks. When a checkbox is clicked, it checks the checkbox, marks it as selected, and activates the next checkbox on the list. 
+
+The click listeners associated with the checkboxes ensure that when the function is called which handles the check/uncheck logic the stylings of the checkbox animate and the checkbox becomes visually 'checked'. 
+
+When the last checkbox is reached and checked, a hidden div is shown and another the page scrolls to the bottom.
 
 <hr>
 
@@ -163,15 +170,24 @@ Since users generally read from left to right, I placed the reset button to the 
 
 ![Timer steps on a desktop](assets/images/blb-timerstepscreenshot.png)
 
+The timer dividers are integrated as part of the sequential flow of the step dividers. The timers also each contain a 15 minute countdown timer which allows for the line cleaner to settle within the beer line and thus assisting in the cleaning of the line. 
+
+The timers have been programme to start by using click event listeners. The timers countdown from a set time, updating the display each second using an interval function and countdown logic.
+
 <hr>
 
 #### Hidden Divider
 
 ![Hidden Div screenshot on a desktop](assets/images/blb-hiddendivscreenshot.png)
 
+The hidden div is initially set to be invisible. It only appears once all the checkboxes have been checked, indicating that every step of the process has been completed. Additionally, the page automatically scrolls to the bottom to ensure the user sees the newly visible div. This div then displays a message informing the user that they have successfully completed the line cleaning process.
+
+
 #### Footer
 
 ![Footer screenshot on a desktop](assets/images/blb-footerscreenshot.png)
+
+The footer at the bottom of the page credits myself as the creator of the site. It also includes a link to Indeed which opens in a new tab, providing users with more information or resources related to the site.
 
 ## Feature Ideas
 
