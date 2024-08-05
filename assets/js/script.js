@@ -106,7 +106,7 @@ const checkboxes = ['checkbox-one', 'checkbox-two', 'checkbox-three', // This is
 
 const activeTimers = {}; // Track active timer const
 
-function startTimer(timerContainer, timer = 10) {
+function startTimer(timerContainer, timer = 900) {
   console.log('starting timer', timerContainer);
 
   if (activeTimers[timerContainer]) {
